@@ -1,16 +1,17 @@
 <?php
 include_once 'sqlConnect.php';
-$whichAlert = 2;
+include_once 'cleanStationNames.php';
+$whichAlert = 11;
 
 // Function Calls
 echo "<center>";
 
 $lastAlert = getLastAlert($whichAlert);
-print_r($lastAlert);
+//print_r($lastAlert);
 echoArray($lastAlert);
 
 $lastAlert = cleanAlert($lastAlert);
-//print_r($lastAlert);
+print_r($lastAlert);
 ///echoArray($lastAlert);
 
 echo "<br />Delayed Direction(s)<br />";
@@ -32,26 +33,28 @@ echo "</center>";
 /*--------------------------------------------------------------------*/
 
 function alertSaysAt($atKey, $lastAlert){
-	for($i=0;$i<count($lastAlert);$i++){
+	for($i=0;$i<count($lastAlert)-$atKey;$i++){
 		$delayedStations[] = $lastAlert[($atKey+$i+1)];
 		if($delayedStations[$i]=='in'){
 			array_pop($delayedStations);
+			//print_r($delayedStations);
 			return $delayedStations;
 		}
 	}	
 }
 
-
-
 function alertSaysLine($lineKey, $lastAlert){
-	$routeFirstName[] = $lastAlert[$lineKey-1];
-	if($routeFirstName[0]=='City'){
-		$routeFirstName[0] = $lastAlert[$lineKey-2]." ".$routeFirstName[0];
-	}elseif($routeFirstName[0]=='Point'){
-		$routeFirstName[0] = $lastAlert[$lineKey-2]." ".$routeFirstName[0];
-	}elseif($routeFirstName[0]=="City/Millbrae"){
-		$routeFirstName[0] = $lastAlert[$lineKey-2]." ".$routeFirstName[0];
-	}
+	//echo $lineKey;
+	$routeFirstName[0] = $lastAlert[$lineKey-1];
+	//Check for more than one line
+	if($lastAlert[$lineKey+1]=='AND'){
+		$secondLine = array_slice($lastAlert,$lineKey+1);
+		//print_r($secondLine);
+		$lineKey2 = array_search('Line', $secondLine);
+		//echo $secondLine[$lineKey2-1];
+		$routeFirstName[] = $secondLine[$lineKey2-1];
+		}
+		//print_r($routeFirstName);
 	//echoArray($routeFirstName);
 	//Get abbriviation of $routeName, needs to be array
 		
@@ -91,8 +94,6 @@ function alertSaysLine($lineKey, $lastAlert){
 	return $delayedStations;
 }
 
-
-
 //Finds the delayed stations by searching for 'at' or 'Line'
 function getDelayedStations($lastAlert){
 	//Does the alert say line?
@@ -106,27 +107,57 @@ function getDelayedStations($lastAlert){
 		$delayedStations = alertSaysLine($lineKey, $lastAlert);
 	}
 	if(is_int($atKey)=='1'){
-		//echo "Alert Says At";
+		//echo "Alert Says At <br/>";
 		$delayedStationsFull = alertSaysAt($atKey, $lastAlert);
-		//print_r($delayedStations);
-		for($i=0;$i<count($delayedStationsFull);$i++){
-			if($delayedStationsFull[$i]=='West'/* || 'San' || 'Walnut' || 'Union' || 'Powell' || 'Pittsburg/Bay' || 'North' || 'Montgomery' || 'Lake' || 'Glen' || 'Downtown' || 'Daly' || 'Coliseum/Oakland' || 'Castro' || 'Bay' || 'Balboa'*/){
-				$delayedStationsFull[$i] = $delayedStationsFull[$i]." ".$delayedStationsFull[$i+1];
-				print_r($delayedStationsFull);	
+		$delayedStations = getAbbr($delayedStationsFull);
+		}
+	//If nto at or line then ALL stations	
+	if(is_int($atKey)=='0'){
+		if(is_int($lineKey)=='0'){
+			$allStations = getStationNames();
+			for($i=1;$i<count($allStations);$i=$i+2){
+				$delayedStations[] = $allStations[$i];
 			}
-			array_pop($delayedStationsFull);
-			print_r($delayedStationsFull);
-			$delayedStations[] = getAbbr($delayedStationsFull[$i]);
-			echoArray($delayedStations);
 		}
 	}
-	
-	
 	return $delayedStations;
 }
 
-
-
+//Gets abbriviation from station names, return array of abbrs
+function getAbbr($names){
+	//echo gettype($names);
+	//echo count($names);
+	//echoArray($names);
+	$stationNameAbbrList = getStationNames();
+	//echoArray($stationNameAbbrList);
+	for($i=0;$i<count($names);$i++){
+		if($names[$i]=="SFO"){
+			$abbr[] = "SFIA";
+			}
+		if($names[$i]=="East Bay"){
+			$abbr[] = "RICH";
+			$abbr[] = "PITT";
+			$abbr[] = "DUBL";
+			$abbr[] = "FRMT";
+			}
+		if($names[$i]=="San Francisco"){
+			$abbr[] = "SFIA";
+			$abbr[] = "MLBR";
+			$abbr[] = "DALY";
+			}
+		//echo $names[$i];
+		$nameKey = array_search($names[$i], $stationNameAbbrList);
+		//echo $nameKey."<br />";
+		if($nameKey!=""){
+			//echo $stationNameAbbrList[$nameKey+1].'<br/>';
+			$abbr[] = $stationNameAbbrList[$nameKey+1];
+			}
+		}
+	//print_r($abbr);
+	$abbr = cleanArray($abbr);
+	//print_r($abbr);
+	return $abbr;
+	}
 
 function getRouteAbbrList(){
 	$routeList = getRouteList();
@@ -135,12 +166,6 @@ function getRouteAbbrList(){
 	$routeAbbrList = cleanArray($routeAbbrList);
 	return $routeAbbrList;
 	}
-
-
-	
-
-
-
 
 //Gets just the route names, returns an array
 function getRouteNameList(){
@@ -192,33 +217,7 @@ function getStationNames(){
 }
 
 
-//Gets abbriviation from station names, return array of abbrs
-function getAbbr($names){
-	//print_r($name);
-	$stationNameAbbrList = getStationNames();
-	for($i=0;$i<count($names);$i++){
-		if($names[$i]=="SFO"){
-			$abbr[] = "SFIA";
-			}
-		if($names[$i]=="East Bay"){
-			$abbr[] = "RICH";
-			$abbr[] = "PITT";
-			$abbr[] = "DUBL";
-			$abbr[] = "FRMT";
-			}
-		if($names[$i]=="24th"){
-			$abbr[] = "24TH";
-			}
-		$nameKey = array_search($names[$i], $stationNameAbbrList);
-		//echo $nameKey."<br />";
-		if($nameKey!=""){
-			$abbr[] = $stationNameAbbrList[$nameKey+1];
-			}
-		}
-	//print_r($abbr);
-	$abbr = cleanArray($abbr);
-	return $abbr;
-	}
+
 	
 //Get the direction, returns an array with names in each element	
 function getDirection($lastAlert){
@@ -299,24 +298,8 @@ function cleanAlert($lastAlert){
 	}
 	
 	//Joins multiple word names
-	for($i=0;$i<count($lastAlert);$i++){
-		if($lastAlert[$i]=='City'){
-			$lastAlert[$i-1] = $lastAlert[$i-1]." ".$lastAlert[$i];
-			unset($lastAlert[$i]);
-		}
-		if($lastAlert[$i]=='Point'){
-			$lastAlert[$i-1] = $lastAlert[$i-1]." ".$lastAlert[$i];
-			unset($lastAlert[$i]);
-		}	
-		if($lastAlert[$i]=='Francisco'){
-			$lastAlert[$i-1] = $lastAlert[$i-1]." ".$lastAlert[$i];
-			unset($lastAlert[$i]);
-		}
-		if($lastAlert[$i]=='Bay'){
-			$lastAlert[$i-1] = $lastAlert[$i-1]." ".$lastAlert[$i];
-			unset($lastAlert[$i]);
-		}
-	}
+	//Moved function to another file
+	$lastAlert = cleanStationNames($lastAlert);
 	
 	//print_r($lastAlert);
 	$lastAlert = array_values($lastAlert);
