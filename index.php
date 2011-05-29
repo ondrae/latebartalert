@@ -24,7 +24,7 @@ function listStations($xml){
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<!--<LINK REL=StyleSheet HREF="html5Reset.css" TYPE="text/css" MEDIA=screen>-->
-		<LINK REL=StyleSheet HREF="trapprStyle.css" TYPE="text/css" MEDIA=screen>
+		<LINK REL=StyleSheet HREF="lateBartStyle.css" TYPE="text/css" MEDIA=screen>
 		
 	
 	</head>
