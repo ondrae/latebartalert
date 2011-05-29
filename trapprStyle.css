@@ -1,0 +1,144 @@
+/* 
+Trappr Stylesheet
+v0.1
+Last Updated: 01-24-2010
+Author: Andrew Hyder Http://hackyourcity.com 
+Twitter: @ondrae
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn, em, img, ins, kbd, q, samp,small, strong, sub, sup, var,b, i, dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    background:transparent;
+}
+
+body{
+	background:#333;
+	font-family:Arial, Verdana, sans-serif;
+	}
+
+h2{
+	font-size:2em;
+	}	
+header, #header{
+	background:white;
+	height:150px;
+	}
+
+#hat{
+	background:#333;
+	height:35px;
+	}
+	
+#head{
+	width:800px;
+	margin: 0 auto 0 auto;
+	background:white;
+	height:100%;
+	}	
+
+#title{
+	
+	}
+
+#tagline{
+	width:425px;
+	min-width:425px;
+	float:right;
+	padding:15px 10px 0 0;
+	font-size:1.5em;
+	}
+	
+#sectionBackground{
+	background:url(watchBG.png) bottom right no-repeat #9999cc; 
+	}
+
+section, #section{
+	width:780px;
+	padding:15px 10px;
+	margin:0 auto 0 auto;
+	}
+
+legend{
+	font-size:2em;
+	}
+	
+label
+	{
+	width: 150px;
+	float: left;
+	text-align: right;
+	margin-right: 0.5em;
+	display: block;	
+	}
+
+form ol{
+	list-style:none;
+	}
+
+form li{
+	padding:10px;
+	}	 
+
+input, textarea {  
+    padding: 10px;  
+    border: solid 1px #E5E5E5;   
+    width: 250px;  
+    background: #FFFFFF url('bg-form.jpg') left top repeat-x;;  
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));  
+    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);  
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    }
+
+input, textarea, select {
+	font-size:1.1em;
+	}      
+ 
+#carrierBox{
+	width:110px;
+	margin-left:9.5em;
+	} 
+
+  
+input:hover, textarea:hover,  
+input:focus, textarea:focus {  
+    border-color: #9999cc;  
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;  
+    }   
+
+.submit{
+	margin-left:10.5em;
+	}
+	
+.submit input{
+	width:175px;
+	height:50px;
+	border: 1px solid #333;
+	border-radius:10px;
+	-moz-border-radius: 10px;
+	background: #333;    
+	color:white;
+	}
+	
+.submit input:active{
+	font-size:0.9em;
+	}	
+	
+
+.note{
+	padding-left:5px;
+	font-size:0.9em;
+	}	
+	
+footer, #footer{
+	width:780px;
+	padding:10px;
+	color:#fff;
+	margin:0 auto 0 auto;
+	}	
+
+footer a, #footer a{
+	color:#9999cc;
+	}	
