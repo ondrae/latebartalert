@@ -39,7 +39,7 @@ function listStations($xml){
 	
 	<div id="head">
 		<div id="tagline">
-			Late Bart Alert will send you a text message if <i>your</i> train is going to be late.
+			Late BART Alert will send you a text message if your train is going to be late. Sign up now to join our beta.
 		</div><!--/tagline-->
 	
 		<div id="title">
