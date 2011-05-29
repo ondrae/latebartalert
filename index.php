@@ -43,7 +43,7 @@ function listStations($xml){
 		</div><!--/tagline-->
 	
 		<div id="title">
-			<a href="http://textmeifmybartislate.us"><img src="lateBartAlert.png" alt="" /></a>
+			<a href="http://textmeifmybartislate.us"><img src="lateBartAlertLogoWhiteBG.original.png" alt="" /></a>
 		</div><!--/title-->
 	
 	</div><!--/head-->
