@@ -1,0 +1,4 @@
+Late BART Alert is a web service that will send you a text message if your specific train is going to be late.
+
+BART has a handy API for late trains. It even can send you text messages about late train, yet it doesn't filter them at all. Late BART Alert does the filtering for you, reducing the noise, so that you only hear about the delays to the one train you actually care about.
+
