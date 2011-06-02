@@ -56,7 +56,7 @@ header{
 section {
 	width:800px;
 	margin:0 auto 0 auto;
-	padding-top: 15px;
+	padding: 15px 0 15px 0;
 	}
 
 fieldset {
@@ -92,13 +92,36 @@ input {
     font-size:18px;  
     }
 
+input:hover, textarea:hover,  
+input:focus, textarea:focus {  
+    border-color: #9999cc;  
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;  
+    }   
+
+.submit{
+	margin-left:10.5em;
+	}
+
+.submit input{
+	width:175px;
+	height:50px;
+	border: 1px solid #333;
+	border-radius:10px;
+	-moz-border-radius: 10px;
+	background: #333;    
+	color:white;
+	}
+
+.submit input:active{
+	font-size:0.9em;
+	}	
+
 footer {
 	width:780px;
 	padding:10px;
 	color:#fff;
 	margin:0 auto 0 auto;
 	font-size:18px;
-	float:right;
 	}	
 
 footer a, #footer a{
