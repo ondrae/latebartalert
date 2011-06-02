@@ -71,7 +71,7 @@ function listStations($xml){
 				
 				<li>	
 				<label>What time do you catch your train?</label>
-				<select name="time" placeholder="08:30am" type="text" />
+				<select name="time" placeholder="Best guess is cool" type="text" />
 					<option value="6:00am">6:00am</option>
 					<option value="6:15am">6:15am</option>
 					<option value="6:30am">6:30am</option>
@@ -83,7 +83,6 @@ function listStations($xml){
 					<option value="6:45am">6:45am</option>
 					<option value="7:00am">7:00am</option>
 				</select>
-				<span class="note">Best guess is cool</span><br />
 				</li>
 				
 				<li>	
@@ -94,32 +93,11 @@ function listStations($xml){
 					?>
 				</select>
 				</li>
-				<!--
+			
 				<li>
-				<label>E-mail:</label>
-				<input type="email" name="email" placeholder="NeverLate@ToWork.com" />
-				<span class="note">If you want us to email you.</span>
-				</li>
-				-->
-				<li>
-				<label>Phone number and carrier:</label>
-				<input type="text" name="phone" placeholder="415-555-5555" /> <br />
-				<select id="carrierBox" name="carrier">
-					<option value="att">ATT</option>
-					<option value="sprint">Sprint</option>
-					<option value="verizon">Verizon</option>
-					<option value="tmobile">T-Mobile</option>
-					<option value="metropcs">Metro PCS</option>
-				</select>
-				<span class="note">So that we can text you</span>
-				</li>
-				<!--
-				<li>
-				<label>Twitter: @</label>
-				<input type="text" name="twitter" placeholder="AlwaysOnTime">
-				<span class="note">If you want us to tweet you</span>
-				</li>
-				-->
+				<label>Phone number:</label>
+				<input type="text" name="phone" placeholder="415-555-5555" /> <br />					</li>
+				
 				<li class="submit">
 				<input type="submit" value="Sign Up" />
 				</li>
@@ -133,7 +111,7 @@ function listStations($xml){
 
 	<footer>
 	<div id="footer">
-		Late Bart is in still in Beta testing. It is being built by Andrew Hyder, an <a href="http://hackyourcity.com">Urban Hacker</a> from San Francisco.
+		Late Bart is in still in Beta testing. It is being built by Andrew Hyder, a <a href="http://hackyourcity.com">City Hacker</a> from San Francisco.
 	</div><!--footer-->
 	</footer>
 	</div><!--/footerBackground-->
