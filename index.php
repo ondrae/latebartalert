@@ -35,7 +35,6 @@ function listStations($xml){
 	
 	
 	<header>
-	<div id="header">
 	<div id="hat">
 	</div><!--/hat-->
 	
@@ -48,13 +47,11 @@ function listStations($xml){
 			<a href="http://www.latebartalert.com"><img src="lateBartAlertLogoWhiteBG.original.png" alt="" /></a>
 		</div><!--/title-->
 	
-	</div><!--/head-->
-	</div><!--/header-->		
+	</div><!--/head-->		
 	</header>
 	
 	<div id="sectionBackground">
 	<section>
-	<div id="section">
 	<h2>Which Train Do you Catch?</h2>
 		<form method="post" action="handleForm.php">
 			<fieldset>
@@ -104,14 +101,11 @@ function listStations($xml){
 			</ol>
 			</fieldset>
 		</form>
-		</div><!--/section-->
 	</section>
 	</div><!--/sectonBackground-->
 
 	<footer>
-	<div id="footer">
 		Late Bart is in still in Beta testing. It is being built by Andrew Hyder, a <a href="http://hackyourcity.com">City Hacker</a> from San Francisco.
-	</div><!--footer-->
 	</footer>
 	</div><!--/footerBackground-->
 

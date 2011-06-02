@@ -25,7 +25,7 @@ h2{
 		
 header{
 	background:white;
-	height:150px;
+	height:125px;
 	}
 
 #hat{
@@ -53,41 +53,31 @@ header{
 	background:url(watchBG.png) bottom right no-repeat #9999cc; 
 	}
 
-section, #section{
+section {
 	width:800px;
 	margin:0 auto 0 auto;
 	}
 
-fieldset, #fieldset{
+fieldset {
 	width: 400px;
-	}
-
-legend{
-	font-size:2em;
-	}
-	
-label
-	{
-	width: 150px;
-	float: left;
-	text-align: right;
-	margin-right: 0.5em;
-	display: block;	
-	}
-
-form {
-	width: 400px;
+	margin: 0 auto 0 auto;
 	}
 
 form ol{
 	list-style:none;
 	}
 
+label
+	{
+	display: block;	
+	}
+
 form select{
 	width:399px;
 	border-color: #000;
+	display: block;
 	}	 
-
+/*
 input, textarea {  
     padding: 10px;  
     border: solid 1px #E5E5E5;   
@@ -132,8 +122,8 @@ input:focus, textarea:focus {
 	padding-left:5px;
 	font-size:0.9em;
 	}	
-	
-footer, #footer{
+*/	
+footer {
 	width:780px;
 	padding:10px;
 	color:#fff;
