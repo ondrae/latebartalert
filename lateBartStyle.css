@@ -26,6 +26,7 @@ h2{
 header, #header{
 	background:white;
 	height:150px;
+	margin-top:15px;
 	}
 
 #hat{
@@ -53,7 +54,7 @@ header, #header{
 	}
 
 section, #section{
-	width:400px;
+	width:800px;
 	margin:0 auto 0 auto;
 	}
 
@@ -74,12 +75,17 @@ label
 	display: block;	
 	}
 
+form {
+	width: 400px;
+	}
+
 form ol{
 	list-style:none;
 	}
 
-form li{
-	padding:10px;
+form select{
+	width:399px;
+	border-color: #000;
 	}	 
 
 input, textarea {  
@@ -95,11 +101,6 @@ input, textarea {
 input, textarea, select {
 	font-size:1.1em;
 	}      
- 
-#carrierBox{
-	width:110px;
-	margin-left:9.5em;
-	} 
 
   
 input:hover, textarea:hover,  
