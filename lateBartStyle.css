@@ -43,9 +43,9 @@ header{
 
 #tagline{
 	width:350px;
-	min-width:350px;
-	padding:7px 10px 0 0;
-	font-size:16px;
+	float:right;
+	padding:10px;
+	font-size:18px;
 	}
 	
 #sectionBackground{
@@ -80,18 +80,19 @@ form label
 
 form select{
 	width:399px;
-	border-color: #000;
+	border-color: #333;
 	display: block;
 	font-size:20px;
 	}	 
 
 input {   
-    border-color:#000;
+    border-color:#333;
     border-width   
-    width: 389px;
+    width: 399px;
     font-size:20px;
     border-radius:10px;
-	-moz-border-radius: 10px;  
+	-moz-border-radius: 10px;
+	padding:6px;  
     }
 
 .submit{
@@ -108,7 +109,7 @@ input {
 	}
 
 .submit input:active{
-	font-size:0.9em;
+	font-size:14px;
 	}	
 
 footer {
