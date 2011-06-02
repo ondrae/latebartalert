@@ -1,6 +1,8 @@
 <?php
+include_once 'connections.php';
+
 //Access the BART API and get the full station list
-$requestStationList = "http://api.bart.gov/api/stn.aspx?cmd=stns&key=EHDB-ZWQN-EKXT-VV5D";
+$requestStationList = "http://api.bart.gov/api/stn.aspx?cmd=stns&key=".$apiKey;
 $xml_stationList = simplexml_load_file($requestStationList) or die("feed not loading");
 
 //List stations as dropdown menu
@@ -19,7 +21,7 @@ function listStations($xml){
 
 	<head>
 		<meta charset="utf-8" />
-		<title>Text Me If My BART Is Late</title>
+		<title>Late BART Alert</title>
 		<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->

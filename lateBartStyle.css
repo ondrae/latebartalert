@@ -44,8 +44,8 @@ header, #header{
 	}
 
 #tagline{
-	width:425px;
-	min-width:425px;
+	width:300px;
+	min-width:300px;
 	float:right;
 	padding:15px 10px 0 0;
 	font-size:1em;
