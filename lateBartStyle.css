@@ -46,7 +46,7 @@ header{
 	min-width:350px;
 	float:right;
 	padding:7px 10px 0 0;
-	font-size:18px;
+	font-size:14px;
 	}
 	
 #sectionBackground{
@@ -76,36 +76,32 @@ form li{
 form label
 	{
 	display: block;
-	font-size:18px;
+	font-size:20px;
 	}
 
 form select{
 	width:399px;
 	border-color: #000;
 	display: block;
-	font-size:18px;
+	font-size:20px;
 	}	 
 
 input {   
-    border-color:#000;   
-    width: 399px;
-    font-size:18px;  
+    border-color:#000;
+    border-width   
+    width: 389px;
+    font-size:20px;
+    border-radius:10px;
+	-moz-border-radius: 10px;  
     }
 
-input:hover, textarea:hover,  
-input:focus, textarea:focus {  
-    border-color: #9999cc;  
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;  
-    }   
-
 .submit{
-	margin-left:10.5em;
+	float:right
 	}
 
 .submit input{
 	width:175px;
 	height:50px;
-	border: 1px solid #333;
 	border-radius:10px;
 	-moz-border-radius: 10px;
 	background: #333;    
@@ -121,7 +117,7 @@ footer {
 	padding:10px;
 	color:#fff;
 	margin:0 auto 0 auto;
-	font-size:18px;
+	font-size:14px;
 	}	
 
 footer a, #footer a{
