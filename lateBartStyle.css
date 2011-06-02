@@ -1,7 +1,7 @@
 /* 
-Trappr Stylesheet
-v0.1
-Last Updated: 01-24-2010
+Late BART Alert Stylesheet
+v0.2
+Last Updated: 06-01-2011
 Author: Andrew Hyder Http://hackyourcity.com 
 Twitter: @ondrae
 */
@@ -21,7 +21,8 @@ body{
 
 h2{
 	font-size:2em;
-	}	
+	}
+		
 header, #header{
 	background:white;
 	height:150px;
@@ -29,19 +30,15 @@ header, #header{
 
 #hat{
 	background:#333;
-	height:35px;
+	height:15px;
 	}
 	
 #head{
-	width:800px;
+	width:600px;
 	margin: 0 auto 0 auto;
 	background:white;
 	height:100%;
 	}	
-
-#title{
-	
-	}
 
 #tagline{
 	width:300px;
@@ -56,8 +53,7 @@ header, #header{
 	}
 
 section, #section{
-	width:780px;
-	padding:15px 10px;
+	width:600px;
 	margin:0 auto 0 auto;
 	}
 
