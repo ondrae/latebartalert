@@ -45,7 +45,7 @@ header{
 	width:350px;
 	min-width:350px;
 	float:right;
-	padding:15px 10px 0 0;
+	padding:7px 10px 0 0;
 	font-size:18px;
 	}
 	
@@ -56,22 +56,27 @@ header{
 section {
 	width:800px;
 	margin:0 auto 0 auto;
-	padding-top: 25px;
+	padding-top: 15px;
 	}
 
 fieldset {
 	width: 400px;
 	margin: 0 auto 0 auto;
+	padding-top:10px;
 	}
 
 form ol{
 	list-style:none;
 	}
 
+form li{
+	padding:10px;
+	}
+
 form label
 	{
 	display: block;
-	font-size:18px;	
+	font-size:18px;
 	}
 
 form select{
@@ -93,6 +98,7 @@ footer {
 	color:#fff;
 	margin:0 auto 0 auto;
 	font-size:18px;
+	float:right;
 	}	
 
 footer a, #footer a{
