@@ -45,7 +45,7 @@ function listStations($xml){
 		</div><!--/tagline-->
 	
 		<div id="title">
-			<a href="http://textmeifmybartislate.us"><img src="lateBartAlertLogoWhiteBG.original.png" alt="" /></a>
+			<a href="http://www.latebartalert.com"><img src="lateBartAlertLogoWhiteBG.original.png" alt="" /></a>
 		</div><!--/title-->
 	
 	</div><!--/head-->
@@ -55,10 +55,9 @@ function listStations($xml){
 	<div id="sectionBackground">
 	<section>
 	<div id="section">
-	
+	<h2>Which Train Do you Catch?</h2>
 		<form method="post" action="handleForm.php">
 			<fieldset>
-			<legend>Which Train Do you Catch?</legend>
 			<ol>	
 				<li>
 				<label>Station you start at:</label> 
