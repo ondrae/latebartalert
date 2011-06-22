@@ -1,5 +1,5 @@
 <?php
-include_once 'sqlConnections.php';
+include_once 'sqlConnect.php';
 
 
 /*------------------ Get all the form answers ---------------------*/
