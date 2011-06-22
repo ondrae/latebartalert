@@ -3,10 +3,7 @@ include_once 'sqlConnect.php';
 
 
 /*------------------ Get all the form answers ---------------------*/
-
-//Connect to MySQL
-mysql_connect($host,$username,$password) or die('Unable to connect');
-mysql_select_db($database);
+opendatabase();
 
 //Get an array of all the form answers
 $query="SELECT * FROM commuters";
