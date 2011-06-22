@@ -1,20 +1,15 @@
 <?php
-
+include_once 'sqlConnections.php';
 
 
 /*------------------ Get all the form answers ---------------------*/
-//MySQL connection settings
-$host = 'mysql50-91.wc1.dfw1.stabletransit.com';
-$username = '536610_testuser';
-$database = '536610_commuters';
-$password = 'testpassword';
 
 //Connect to MySQL
 mysql_connect($host,$username,$password) or die('Unable to connect');
 mysql_select_db($database);
 
 //Get an array of all the form answers
-$query="SELECT * FROM formAnswers";
+$query="SELECT * FROM commuters";
 $result=mysql_query($query);
 
 //Get an array of all the advisories content		
@@ -32,21 +27,15 @@ $num=mysql_num_rows($result);
 $i=0;
 
 while ($i < $num) {
-	$startStation=mysql_result($result,$i,"startStation");
+	$startStation=mysql_result($result,$i,"start_station");
 	$time=mysql_result($result,$i,"time");
-	$endStation=mysql_result($result,$i,"endStation");
-	$email=mysql_result($result,$i,"email");
+	$endStation=mysql_result($result,$i,"end_station");
 	$phone=mysql_result($result,$i,"phone");
-	$carrier=mysql_result($result,$i,"carrier");
-	$twitter=mysql_result($result,$i,"twitter");
 	
 	echo "$startStation  |  ";
 	echo "$time  |  ";
 	echo "$endStation  |  ";
-	echo "$email  |  ";
 	echo "$phone  |  ";
-	echo "$carrier  |  ";
-	echo "$twitter";
 	
 	$i++;
 	echo "<br />";
@@ -82,11 +71,6 @@ if ($currentAdvisory == "No delays reported."){
 	echo $currentAdvisory."<br />";
 	} else {
 //Else check in mysql for last adivsory to see if its changed
-		$host = 'mysql50-91.wc1.dfw1.stabletransit.com';
-		$username = '536610_testuser';
-		$database = '536610_commuters';
-		$password = 'testpassword';
-		$table = "advisories";
 		$column = "advisory";
 
 		mysql_connect($host,$username,$password) or die('woops');
