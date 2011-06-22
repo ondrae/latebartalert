@@ -111,7 +111,7 @@ function getDelayedStations($lastAlert){
 		$delayedStationsFull = alertSaysAt($atKey, $lastAlert);
 		$delayedStations = getAbbr($delayedStationsFull);
 		}
-	//If nto at or line then ALL stations	
+	//If not at or line then ALL stations	
 	if(is_int($atKey)=='0'){
 		if(is_int($lineKey)=='0'){
 			$allStations = getStationNames();
