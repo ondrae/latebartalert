@@ -1,5 +1,5 @@
 <?php
-include_once 'connections.php';
+include_once 'sqlConnections.php';
 
 //Access the BART API and get the full station list
 $requestStationList = "http://api.bart.gov/api/stn.aspx?cmd=stns&key=".$apiKey;
