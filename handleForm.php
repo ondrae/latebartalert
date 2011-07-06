@@ -9,6 +9,8 @@ $time = $_POST['time'];
 $endStation = array($_POST['end_station']);
 $phone = $_POST['phone'];
 
+$table = 'commuters';
+
 $apiKey = 'EHDB-ZWQN-EKXT-VV5D';
 
 $startStation = getAbbr($startStation);
@@ -165,14 +167,14 @@ mysql_close();
 	</header>
 	
 	<div id="sectionBackground">
-	<section id="lateTrainAlert">
+	<section id="lateTrainAlert" style="height:600px">
 	
 	Awesome. We'll send you a text, email, or tweet whenever the train from
 	<?php 
 		echo $startStation . "leaving around" . $time . "headed towards" . $endStation . "is late";
 		?>	
 	
-	 If you want to sign up for another train, maybe for your evening commute, then click <a href="http://textmeifmybartislate.us">here</a>.	
+	 If you want to sign up for another train, maybe for your evening commute, then click <a href="http://www.latebartalert.com">here</a>.	
 	</section>
 
 	</div><!--/sectonBackground-->

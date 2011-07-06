@@ -7,8 +7,7 @@ function openDatabase(){
 	$host = 'mysql.latebart.dotcloud.com:5989';
 	$username = 'latebart';
 	$database = 'latebart';
-	$password = '9832jfh23890hj';
-	$table = "commuters";
+	$password = '3948hjgf3489';
 	mysql_connect($host,$username,$password) or die('woops');
 	mysql_select_db($database);
 }
