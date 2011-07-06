@@ -1,6 +1,6 @@
 <?php
-include_once 'sqlConnect.php';
-include_once 'cleanStationNames.php';
+include 'sqlConnect.php';
+include 'cleanStationNames.php';
 //include_once 'model.php';
 
 //Establish variables names from form
@@ -11,17 +11,8 @@ $phone = $_POST['phone'];
 
 $table = 'commuters';
 
-$apiKey = 'EHDB-ZWQN-EKXT-VV5D';
-
-$startStation = getAbbr($startStation);
-$endStation = getAbbr($endStation);
-$$apiKey = 'EHDB-ZWQN-EKXT-VV5D';
-$startStation = array('24th St. Mission');
-$endStation = array('Powell St.');
-
 //Get list of station names and abbriviations, returns array with names and abbr alternating
-function getStationNames(){
-	$apiKey = "EHDB-ZWQN-EKXT-VV5D";
+function getStationNames($apiKey){
 	$requestStationList = "http://api.bart.gov/api/stn.aspx?cmd=stns&key=".$apiKey;
 	$xml_stationList = simplexml_load_file($requestStationList) or die("feed not loading");
 		
@@ -35,9 +26,9 @@ function getStationNames(){
 
 
 //Gets abbriviation from station names, return array of abbrs
-function getAbbr($names){
+function getAbbr($names, $apiKey){
 	//print_r($names);
-	$stationNameAbbrList = getStationNames();
+	$stationNameAbbrList = getStationNames($apiKey);
 	for($i=0;$i<count($names);$i++){
 		if($names[$i]=="SFO"){
 			$abbr[] = "SFIA";
@@ -73,8 +64,8 @@ function cleanArray($array){
 	return $array;
 }	
 
-$startStation = getAbbr($startStation);
-$endStation = getAbbr($endStation);
+$startStation = getAbbr($startStation, $apiKey);
+$endStation = getAbbr($endStation, $apiKey);
 //print_r($startStation);
 //print_r($endStation);
 	
@@ -171,9 +162,9 @@ mysql_close();
 	
 	Awesome. We'll send you a text, email, or tweet whenever the train from
 	<?php 
-		echo $startStation . "leaving around" . $time . "headed towards" . $endStation . "is late";
+		echo $startStation[0] . "leaving around" . $time . "headed towards" . $endStation[0] . "is late";
+		echo '<h1>'.$apiKey.'</h1>';
 		?>	
-	
 	 If you want to sign up for another train, maybe for your evening commute, then click <a href="http://www.latebartalert.com">here</a>.	
 	</section>
 
