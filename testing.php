@@ -9,8 +9,8 @@ $mysqli = new mysqli($envjson['DOTCLOUD_DB_MYSQL_HOST'],
                      '7dsfjkh78',   # password
                      'latebart',       # db name
                      $envjson['DOTCLOUD_DB_MYSQL_PORT']);
+$formAnswers = $mysqli->query('SELECT * from formAnswers');
 
-print_r($mysqli->query('SELECT now();'));
-print_r($mysqli->query('SELECT * from formAnswers'));
+echo $formAnswers;
 
 ?>
