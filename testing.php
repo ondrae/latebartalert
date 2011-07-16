@@ -1,20 +1,15 @@
 <?php
-$envfilepath = $_ENV['HOME'] + '/environment.json';
-$environment = json_decode(file_get_contents($envfilepath),true);
-$db_host = $environment['DOTCLOUD_DB_MYSQL_HOST'];
-$db_port = $environment['DOTCLOUD_DB_MYSQL_PORT'];
-$db_username = $environment['DOTCLOUD_DB_MYSQL_LOGIN'];
-$db_password = $environment['DOTCLOUD_DB_MYSQL_PASSWORD'];
-$DBbase = 'latebart';
 
-mysql_connect($db_host,$db_username,$db_password) or die('woops');
-mysql_select_db($DBbase);
+# Import environment settings from DotCloud
+$envjson = json_decode(file_get_contents("/home/dotcloud/environment.json"),true);
 
-$result = mysql_query('SELECT startStation from formAnswers;');
+# Create MySQL Connection
+$mysqli = new mysqli($envjson['DOTCLOUD_DB_MYSQL_HOST'],
+                     'latebarter',         # username
+                     '7dsfjkh78',   # password
+                     'latebart',       # db name
+                     $envjson['DOTCLOUD_DB_MYSQL_PORT']);
 
-print $result;
-echo $result;
-mysql_close();
- 
+print_r($mysqli->query('SELECT now();'));
 
 ?>
