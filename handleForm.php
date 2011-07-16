@@ -1,7 +1,7 @@
 <?php
 include 'sqlConnect.php';
 include 'cleanStationNames.php';
-//include_once 'model.php';
+
 
 //Establish variables names from form
 $startStation = array($_POST['start_station']);
@@ -9,7 +9,7 @@ $time = $_POST['time'];
 $endStation = array($_POST['end_station']);
 $phone = $_POST['phone'];
 
-$table = 'commuters';
+$table = 'formAnswers';
 
 //Get list of station names and abbriviations, returns array with names and abbr alternating
 function getStationNames($apiKey){
@@ -163,7 +163,6 @@ mysql_close();
 	Awesome. We'll send you a text, email, or tweet whenever the train from
 	<?php 
 		echo $startStation[0] . "leaving around" . $time . "headed towards" . $endStation[0] . "is late";
-		echo '<h1>'.$apiKey.'</h1>';
 		?>	
 	 If you want to sign up for another train, maybe for your evening commute, then click <a href="http://www.latebartalert.com">here</a>.	
 	</section>
