@@ -1,6 +1,6 @@
 <?php
-//include_once 'sqlConnect.php';
-$apiKey = 'EHDB-ZWQN-EKXT-VV5D';
+include 'sqlConnect.php';
+//$apiKey = 'EHDB-ZWQN-EKXT-VV5D';
 //Access the BART API and get the full station list
 $requestStationList = "http://api.bart.gov/api/stn.aspx?cmd=stns&key=".$apiKey;
 $xml_stationList = simplexml_load_file($requestStationList) or die("feed not loading");
@@ -92,7 +92,7 @@ function listStations($xml){
 			
 				<li>
 				<label>Phone number:</label>
-				<input type="text" name="phone" placeholder="415-555-5555" /> <br />					</li>
+				<input type="text" name="phone" placeholder="415-NOT-LATE" /> <br />					</li>
 				
 				<li class="submit">
 				<input type="submit" value="Sign Up" />
