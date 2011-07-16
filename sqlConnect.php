@@ -8,8 +8,8 @@ function openDatabase(){
 	$environment = json_decode(file_get_contents($envfilepath),true);
 	$host = $environment['DOTCLOUD_DATA_MYSQL_HOST'];
 	$db_port = $environment['DOTCLOUD_DATA_MYSQL_PORT'];
-	$password = $environment['DOTCLOUD_DATA_MYSQL_PASSWORD'];
-	$username = $environment['DOTCLOUD_DATA_MYSQL_LOGIN'];
+	$password = '7dsfjkh78';
+	$username = 'latebarter';
 	$database = 'latebart';
 	mysql_connect($host,$username,$password) or die('woops');
 	mysql_select_db($database);
