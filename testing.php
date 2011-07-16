@@ -11,5 +11,6 @@ $mysqli = new mysqli($envjson['DOTCLOUD_DB_MYSQL_HOST'],
                      $envjson['DOTCLOUD_DB_MYSQL_PORT']);
 
 print_r($mysqli->query('SELECT now();'));
+print_r($mysqli->query('SELECT * from formAnswers'));
 
 ?>
