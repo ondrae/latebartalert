@@ -1,6 +1,6 @@
 www:
   type: php
-mysql:
+db:
   type: mysql
 alertchecker:
   type: php-worker
