@@ -1,5 +1,5 @@
 <?
-$host = 'db.latebart.dotcloud.com:10926';
+$host = 'mysql://root:hfzedh6K4CspuJzVKiaT@2810db75.dotcloud.com:10927';
 $password = '7dsfjkh78';
 $username = 'latebarter';
 $database = 'latebart';
