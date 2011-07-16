@@ -1,6 +1,6 @@
 <?php
-include_once 'sqlConnect.php';
-
+//include_once 'sqlConnect.php';
+$apiKey = 'EHDB-ZWQN-EKXT-VV5D';
 //Access the BART API and get the full station list
 $requestStationList = "http://api.bart.gov/api/stn.aspx?cmd=stns&key=".$apiKey;
 $xml_stationList = simplexml_load_file($requestStationList) or die("feed not loading");
