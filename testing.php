@@ -1,5 +1,5 @@
 <?php
-$envfilepath = $_ENV['HOME'] + '/environment.json'
+$envfilepath = $_ENV['HOME'] + '/environment.json';
 $environment = json_decode(file_get_contents($envfilepath),true);
 $db_host = $environment['DOTCLOUD_DATA_MYSQL_HOST'];
 $db_port = $environment['DOTCLOUD_DATA_MYSQL_PORT'];
@@ -10,7 +10,7 @@ $database = 'latebart';
 mysql_connect($db_host,$db_username,$db_password) or die('woops');
 mysql_select_db($database);
 
-$result = mysql_query('SELECT startStation from formAnswers limit 1;');
+$result = mysql_query('SELECT startStation from formAnswers;');
 
 print $result;
 echo $result;
