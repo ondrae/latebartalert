@@ -9,6 +9,6 @@ $mysqli = new mysqli($envjson['DOTCLOUD_DB_MYSQL_HOST'],
                      'latebart',       # db name
                      $envjson['DOTCLOUD_DB_MYSQL_PORT']);
 
-echo $mysqli->query('SELECT * from formAnswers;');
+print_r($mysqli->query('SELECT * from formAnswers;'));
 
 ?>
