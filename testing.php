@@ -5,13 +5,10 @@ $username = 'latebarter';
 $database = 'latebart';
 mysql_connect($host,$username,$password) or die('woops');
 mysql_select_db($database);
-echo 'Hi!';
 
-$result = mysql_query('SELECT * from formAnswers;');
-if (!$result) {
-    die('Invalid query: ' . mysql_error());
-}
-echo 'Hi!';
+$result = mysql_query('SELECT startStation from formAnswers limit 1;');
+
+
 echo $results;
 mysql_close();
  
