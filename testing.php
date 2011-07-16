@@ -4,13 +4,22 @@
 $envjson = json_decode(file_get_contents("/home/dotcloud/environment.json"),true);
 
 # Create MySQL Connection
-$mysqli = new mysqli($envjson['DOTCLOUD_DB_MYSQL_HOST'],
+mysql_connect($envjson['DOTCLOUD_DB_MYSQL_HOST'],
                      'latebarter',         # username
                      '7dsfjkh78',   # password
                      'latebart',       # db name
-                     $envjson['DOTCLOUD_DB_MYSQL_PORT']);
-$formAnswers = $mysqli->query('SELECT * from formAnswers');
+                     $envjson['DOTCLOUD_DB_MYSQL_PORT']) or die('Can\'t connect');
+                     
+mysql_select_db($database);
 
-echo $formAnswers;
+$result = mysql_query('SELECT startStation from formAnswers;');
+
+print $result;
+echo $result;
+mysql_close();
+ 
+
+
+
 
 ?>
