@@ -114,7 +114,7 @@ foreach ($routeNumbers as $num){
 
 	
 //Establish query to insert data to MySQL table
-$insert = "INSERT INTO $table VALUES ('','$start_station','$time','$end_station','$phone', '$commuterStations')";
+$insert = "INSERT INTO $table VALUES ('','$startStation','$time','$endStation','$phone', '$commuterStations')";
 
 openDatabase();
 
