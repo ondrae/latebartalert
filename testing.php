@@ -1,4 +1,4 @@
-<?
+<?php
 $host = '2810db75.dotcloud.com:10927';
 $password = '7dsfjkh78';
 $username = 'latebarter';
