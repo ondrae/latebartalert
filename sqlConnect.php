@@ -1,14 +1,13 @@
 <?php
-
+#BART API KEY
 $apiKey = 'EHDB-ZWQN-EKXT-VV5D';
 
-$host = 'db.latebart.dotcloud.com:10926';
-$password = '7dsfjkh78';
-$username = 'latebarter';
-$database = 'latebart';
-mysql_connect($host,$username,$password) or die('woops');
-mysql_select_db($database);
-echo 'Hi!';
-
-
+openDatabase(){
+	$envjson = json_decode(file_get_contents("/home/dotcloud/environment.json"),true);
+	#Create MySQL Connection
+	$db = mysql_connect($envjson['DOTCLOUD_DB_MYSQL_HOST']
+						.':'.$envjson['DOTCLOUD_DB_MYSQL_PORT'],
+						$envjson['DOTCLOUD_DB_MYSQL_LOGIN'],
+						$envjson['DOTCLOUD_DB_MYSQL_PASSWORD']);
+}
 ?>
