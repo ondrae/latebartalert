@@ -9,9 +9,12 @@ $xml_stationList = simplexml_load_file($requestStationList) or die("feed not loa
 function listStations($xml){
 	$stationList[];
 	for($i=0;$i<sizeof($xml->stations->station);$i++){
-		array_push($stationList,"<option value=".$xml->stations->station[$i]->name.">");
-		array_push($stationList,$xml->stations->station[$i]->name);
-		array_push($stationList,"</option>");
+		$a = "<option value=".$xml->stations->station[$i]->name.">";
+		$b = $xml->stations->station[$i]->name;
+		$c = "</option>";
+		array_push($stationList,$a);
+		array_push($stationList,$b);
+		array_push($stationList,$c);
 	}
 	return $stationList;
 }
