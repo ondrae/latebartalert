@@ -3,7 +3,7 @@ include 'sqlConnect.php';
 include 'cleanStationNames.php';
 
 echo $_POST['startStation'];
-echo $_POST['endStation']
+echo $_POST['endStation'];
 
 
 //Establish variables names from form
