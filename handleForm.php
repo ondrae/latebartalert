@@ -3,7 +3,8 @@ include 'sqlConnect.php';
 include 'cleanStationNames.php';
 
 function cleanPeriods($name){
-	$name = str($name);
+	$name = str_split($name);
+	$name = cleanArray($name);
 	return $name;
 }
 
@@ -67,13 +68,10 @@ function getAbbr($names, $apiKey){
 	
 //Make an array contain only strings
 function cleanArray($array){
-	echo '3 <br />';
 	print_r($array);
 	for($i=0;$i<count($array);$i++){
 		$array[$i] = strval($array[$i]);
 	}
-	echo '4 <br />';
-	print_r($array);
 	return $array;
 }	
 
