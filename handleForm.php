@@ -28,7 +28,7 @@ function getStationNames($apiKey){
 
 //Gets abbriviation from station names, return array of abbrs
 function getAbbr($names, $apiKey){
-	//print_r($names);
+	print_r($names);
 	$stationNameAbbrList = getStationNames($apiKey);
 	for($i=0;$i<count($names);$i++){
 		if($names[$i]=="SFO"){
@@ -51,7 +51,7 @@ function getAbbr($names, $apiKey){
 			}
 		}
 	$abbr = cleanArray($abbr);
-	//print_r($abbr);
+	print_r($abbr);
 	return $abbr;
 	}
 	
@@ -67,10 +67,10 @@ function cleanArray($array){
 
 $startStation = getAbbr($startStation, $apiKey);
 $endStation = getAbbr($endStation, $apiKey);
-print_r($startStation);
-echo gettype($startStation);
-print_r($endStation);
-echo gettype($endStation);
+//print_r($startStation);
+//echo gettype($startStation);
+//print_r($endStation);
+//echo gettype($endStation);
 	
 //Get all route numbers
 $requestRouteNumbers = "http://api.bart.gov/api/route.aspx?cmd=routes&key=".$apiKey;
