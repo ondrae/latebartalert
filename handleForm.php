@@ -7,9 +7,9 @@ function cleanPeriods($name){
 	return $name;
 }
 
-$postStartStation = $_POST['startStation']
+$postStartStation = $_POST['startStation'];
 $startStation = cleanPeriods($postStartStation);
-$postEndStation = $_POST['endStation']
+$postEndStation = $_POST['endStation'];
 $postEndStation = cleanPeriods($postEndStation);
 
 //Establish variables names from form
