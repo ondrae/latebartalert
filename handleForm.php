@@ -2,11 +2,21 @@
 include 'sqlConnect.php';
 include 'cleanStationNames.php';
 
+function cleanPeriods($name){
+	$name = str($name)
+	return $name
+}
+
+$postStartStation = $_POST['startStation']
+$startStation = cleanPeriods($postStartStation);
+$postEndStation = $_POST['endStation']
+$postEndStation = cleanPeriods($postEndStation);
+
 //Establish variables names from form
-$startStation = array($_POST['startStation']);
+$startStation = array($postStartStation);
 //print_r($startStation);
 $time = $_POST['time'];
-$endStation = array($_POST['endStation']);
+$endStation = array($postEndStation);
 //print_r($endStation);
 $phone = $_POST['phone'];
 
