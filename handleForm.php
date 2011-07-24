@@ -6,7 +6,7 @@ include 'cleanStationNames.php';
 $startStation = array($_POST['startStation']);
 print_r($startStation);
 $time = $_POST['time'];
-//$endStation = array($_POST['endStation']);
+$endStation = array($_POST['endStation']);
 print_r($endStation);
 $phone = $_POST['phone'];
 
@@ -167,7 +167,7 @@ mysql_close();
 	
 	Awesome. We'll send you a text, email, or tweet whenever the train from 
 	<?php 
-		echo $startStation[0] . "leaving around" . $time . "headed towards" . $endStation[0] . "is late. ";
+		echo " ". $startStation[0] . "leaving around " . $time . " headed towards" . $endStation[0] . "is late. ";
 		?>	
 	 If you want to sign up for another train, maybe for your evening commute, then click <a href="http://www.latebartalert.com">here</a>.	
 	</section>
