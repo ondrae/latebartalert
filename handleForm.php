@@ -1,7 +1,7 @@
 <?php
 include 'sqlConnect.php';
 include 'cleanStationNames.php';
-
+/*
 function cleanPeriods($name){
 	$name = str_split($name);
 	$pKey = array_search('.',$name);
@@ -14,12 +14,12 @@ $postStartStation = $_POST['startStation'];
 $cleanStartStation = cleanPeriods($postStartStation);
 $postEndStation = $_POST['endStation'];
 $cleanEndStation = cleanPeriods($postEndStation);
-
+*/
 //Establish variables names from form
-$startStation = array($cleanStartStation);
+$startStation = array($_POST['startStation']);
 //print_r($startStation);
 $time = $_POST['time'];
-$endStation = array($cleanEndStation);
+$endStation = array($_POST['endStation']);
 //print_r($endStation);
 $phone = $_POST['phone'];
 
