@@ -3,8 +3,8 @@ include 'sqlConnect.php';
 include 'cleanStationNames.php';
 
 function cleanPeriods($name){
-	$name = str($name)
-	return $name
+	$name = str($name);
+	return $name;
 }
 
 $postStartStation = $_POST['startStation']
