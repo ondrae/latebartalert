@@ -66,10 +66,10 @@ function cleanArray($array){
 
 $startStation = getAbbr($startStation, $apiKey);
 $endStation = getAbbr($endStation, $apiKey);
-//print_r($startStation);
-//echo gettype($startStation);
-//print_r($endStation);
-//echo gettype($endStation);
+print_r($startStation);
+echo gettype($startStation);
+print_r($endStation);
+echo gettype($endStation);
 	
 //Get all route numbers
 $requestRouteNumbers = "http://api.bart.gov/api/route.aspx?cmd=routes&key=".$apiKey;
@@ -125,7 +125,7 @@ mysql_query($insert);
 
 mysql_close();
 ?>
-
+/*
 <!DOCTYPE html>
 
 <html>
@@ -180,3 +180,4 @@ mysql_close();
 
 </body>
 </html>
+*/
