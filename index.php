@@ -7,7 +7,7 @@ $xml_stationList = simplexml_load_file($requestStationList) or die("feed not loa
 
 //List stations as dropdown menu
 function listStations($xml){
-	$stationList[];
+	$stationList = array();
 	for($i=0;$i<sizeof($xml->stations->station);$i++){
 		$a = "<option value=".$xml->stations->station[$i]->name.">";
 		$b = $xml->stations->station[$i]->name;
