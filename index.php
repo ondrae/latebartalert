@@ -7,16 +7,11 @@ $xml_stationList = simplexml_load_file($requestStationList) or die("feed not loa
 
 //List stations as dropdown menu
 function listStations($xml){
-	$stationList = array();
 	for($i=0;$i<sizeof($xml->stations->station);$i++){
-		$a = "<option value=".$xml->stations->station[$i]->name.">";
-		$b = $xml->stations->station[$i]->name;
-		$c = "</option>";
-		array_push($stationList,$a);
-		array_push($stationList,$b);
-		array_push($stationList,$c);
+		echo "<option value='"..$xml->stations->station[$i]->name."'>";
+		echo $xml->stations->station[$i]->name;
+		echo "</option>";
 	}
-	return $stationList;
 }
 
 function echoArray($array){
@@ -74,10 +69,7 @@ function echoArray($array){
 				<label for="startStation">Station you start at:</label> 
 				<select name="startStation" required>
 					<?php
-					$stationList = listStations($xml_stationList);
-					foreach($stationList as $station){
-						echo $station;
-					}
+					listStations($xml_stationList);
 					?>
 				</select>
 				</li>
@@ -102,10 +94,7 @@ function echoArray($array){
 				<label for="endStation">Station you end at:</label>
 				<select name="endStation" required>
 					<?php
-					$stationList = listStations($xml_stationList);
-					foreach($stationList as $station){
-						echo $station;
-					}
+					listStations($xml_stationList);
 					?>
 				</select>
 				</li>
