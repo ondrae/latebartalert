@@ -57,7 +57,7 @@ function listStations($xml){
 			<fieldset>
 			<ol>	
 				<li>
-				<label>Station you start at:</label> 
+				<label for="startStation">Station you start at:</label> 
 				<select name="startStation" required>
 					<?php
 					listStations($xml_stationList);
@@ -105,7 +105,7 @@ function listStations($xml){
 	</div><!--/sectonBackground-->
 
 	<footer>
-		Late Bart is in still in Beta testing. It is being built by Andrew Hyder, a <a href="http://hackyourcity.com">City Hacker</a> from San Francisco.
+		Late Bart is in still in Beta testing. It is being built by Andrew Hyder, an <a href="http://hackyourcity.com">Urban Hacker</a> from San Francisco.
 	</footer>
 	</div><!--/footerBackground-->
 
