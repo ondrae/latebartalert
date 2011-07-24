@@ -4,10 +4,10 @@ include 'cleanStationNames.php';
 
 //Establish variables names from form
 $startStation = array($_POST['startStation']);
-print_r($startStation);
+//print_r($startStation);
 $time = $_POST['time'];
 $endStation = array($_POST['endStation']);
-print_r($endStation);
+//print_r($endStation);
 $phone = $_POST['phone'];
 
 $table = 'formAnswers';
@@ -67,10 +67,10 @@ function cleanArray($array){
 
 $startStation = getAbbr($startStation, $apiKey);
 $endStation = getAbbr($endStation, $apiKey);
-//print_r($startStation);
-//echo gettype($startStation);
-//print_r($endStation);
-//echo gettype($endStation);
+print_r($startStation);
+echo gettype($startStation);
+print_r($endStation);
+echo gettype($endStation);
 	
 //Get all route numbers
 $requestRouteNumbers = "http://api.bart.gov/api/route.aspx?cmd=routes&key=".$apiKey;
