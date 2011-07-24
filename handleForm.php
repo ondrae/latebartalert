@@ -2,11 +2,13 @@
 include 'sqlConnect.php';
 include 'cleanStationNames.php';
 
+
+
 //Establish variables names from form
 $startStation = array($_POST['startStation']);
 print_r($startStation);
 $time = $_POST['time'];
-$endStation = array($_POST['endStation']);
+//$endStation = array($_POST['endStation']);
 print_r($endStation);
 $phone = $_POST['phone'];
 

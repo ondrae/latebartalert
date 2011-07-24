@@ -68,9 +68,9 @@ function listStations($xml){
 				<li>	
 				<label>What time do you catch your train?</label>
 				<select name="time" placeholder="Best guess is cool" type="text" />
-					<option value="6:00am">6:00am</option>
-					<option value="6:15am">6:15am</option>
-					<option value="6:30am">6:30am</option>
+					<option value="6:00 am">6:00 am</option>
+					<option value="6:15am">6:15 am</option>
+					<option value="6:30am">6:30 am</option>
 					<option value="6:45am">6:45am</option>
 					<option value="7:00am">7:00am</option>
 					<option value="7:15am">7:15am</option>
