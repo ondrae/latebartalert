@@ -28,6 +28,7 @@ function getStationNames($apiKey){
 
 //Gets abbriviation from station names, return array of abbrs
 function getAbbr($names, $apiKey){
+	echo '1 <br />';
 	print_r($names);
 	$stationNameAbbrList = getStationNames($apiKey);
 	//print_r($stationNameAbbrList);
@@ -51,19 +52,23 @@ function getAbbr($names, $apiKey){
 			$abbr[] = $stationNameAbbrList[$nameKey+1];
 			}
 		}
-	print_r($names);
+	echo '2 <br />';
+	print_r($abbr);
 	$abbr = cleanArray($abbr);
+	echo '5 <br />';
 	print_r($abbr);
 	return $abbr;
 	}
 	
 //Make an array contain only strings
 function cleanArray($array){
-	//print_r($array);
+	echo '3 <br />';
+	print_r($array);
 	for($i=0;$i<count($array);$i++){
 		$array[$i] = strval($array[$i]);
 	}
-	//print_r($array);
+	echo '4 <br />';
+	print_r($array);
 	return $array;
 }	
 
