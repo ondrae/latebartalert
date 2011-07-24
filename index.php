@@ -75,7 +75,9 @@ function echoArray($array){
 				<select name="startStation" required>
 					<?php
 					$stationList = listStations($xml_stationList);
-					echoArray($stationList);
+					foreach($stationList as $station){
+						echo $station;
+					}
 					?>
 				</select>
 				</li>
@@ -101,7 +103,9 @@ function echoArray($array){
 				<select name="endStation" required>
 					<?php
 					$stationList = listStations($xml_stationList);
-					echoArray($stationList);
+					foreach($stationList as $station){
+						echo $station;
+					}
 					?>
 				</select>
 				</li>
