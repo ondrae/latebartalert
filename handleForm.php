@@ -4,13 +4,14 @@ include 'cleanStationNames.php';
 
 function cleanPeriods($name){
 	$name = str_split($name);
-	$name = cleanArray($name);
+	$pKey = array_search('.',$name);
+	$name[$pKey] = '\.';
 	$name = implode($name);
 	return $name;
 }
 
 $postStartStation = $_POST['startStation'];
-$startStation = cleanPeriods($postStartStation);
+$postStartStation = cleanPeriods($postStartStation);
 $postEndStation = $_POST['endStation'];
 $postEndStation = cleanPeriods($postEndStation);
 
@@ -69,7 +70,7 @@ function getAbbr($names, $apiKey){
 	
 //Make an array contain only strings
 function cleanArray($array){
-	print_r($array);
+	//print_r($array);
 	for($i=0;$i<count($array);$i++){
 		$array[$i] = strval($array[$i]);
 	}
