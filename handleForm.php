@@ -11,15 +11,15 @@ function cleanPeriods($name){
 }
 
 $postStartStation = $_POST['startStation'];
-$postStartStation = cleanPeriods($postStartStation);
+$cleanStartStation = cleanPeriods($postStartStation);
 $postEndStation = $_POST['endStation'];
-$postEndStation = cleanPeriods($postEndStation);
+$cleanEndStation = cleanPeriods($postEndStation);
 
 //Establish variables names from form
-$startStation = array($postStartStation);
+$startStation = array($cleanStartStation);
 //print_r($startStation);
 $time = $_POST['time'];
-$endStation = array($postEndStation);
+$endStation = array($cleanEndStation);
 //print_r($endStation);
 $phone = $_POST['phone'];
 
