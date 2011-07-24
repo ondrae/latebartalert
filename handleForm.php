@@ -48,6 +48,7 @@ function getAbbr($names, $apiKey){
 			$abbr[] = "DALY";
 			}
 		$nameKey = array_search($names[$i], $stationNameAbbrList);
+		print_r($nameKey);
 		if($nameKey!=""){
 			$abbr[] = $stationNameAbbrList[$nameKey+1];
 			}
