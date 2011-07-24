@@ -5,6 +5,7 @@ include 'cleanStationNames.php';
 function cleanPeriods($name){
 	$name = str_split($name);
 	$name = cleanArray($name);
+	$name = implode($name);
 	return $name;
 }
 
