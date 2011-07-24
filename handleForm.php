@@ -66,8 +66,10 @@ function cleanArray($array){
 
 $startStation = getAbbr($startStation, $apiKey);
 $endStation = getAbbr($endStation, $apiKey);
-//print_r($startStation);
-//print_r($endStation);
+print_r($startStation);
+echo gettype($startStation);
+print_r($endStation);
+echo gettype($endStation);
 	
 //Get all route numbers
 $requestRouteNumbers = "http://api.bart.gov/api/route.aspx?cmd=routes&key=".$apiKey;
@@ -172,7 +174,7 @@ mysql_close();
 	</div><!--/sectonBackground-->
 
 	<footer>
-		Late Bart is in still in Beta testing. It is being built by Andrew Hyder, a <a href="http://hackyourcity.com">City Hacker</a> from San Francisco.
+		Late Bart is in still in Beta testing. It is being built by Andrew Hyder, an <a href="http://hackyourcity.com">Urban Hacker</a> from San Francisco.
 	</footer>
 	</div><!--/footerBackground-->
 
