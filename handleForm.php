@@ -30,7 +30,7 @@ function getStationNames($apiKey){
 function getAbbr($names, $apiKey){
 	print_r($names);
 	$stationNameAbbrList = getStationNames($apiKey);
-	print_r($stationNameAbbrList);
+	//print_r($stationNameAbbrList);
 	for($i=0;$i<count($names);$i++){
 		if($names[$i]=="SFO"){
 			$abbr[] = "SFIA";
@@ -51,6 +51,7 @@ function getAbbr($names, $apiKey){
 			$abbr[] = $stationNameAbbrList[$nameKey+1];
 			}
 		}
+	print_r($names);
 	$abbr = cleanArray($abbr);
 	print_r($abbr);
 	return $abbr;
