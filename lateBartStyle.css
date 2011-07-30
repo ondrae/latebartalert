@@ -15,7 +15,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 }
 
 body{
-	background:white;
+	background:#333;
 	font-family:Arial, Verdana, sans-serif;
 	}
 
@@ -24,13 +24,12 @@ h2{
 	}
 		
 header{
-	background:#333;
-	height:180px;
-	color:white;
+	background:white;
+	height:195px;
 	}
 
 #hat{
-	background:white;
+	background:#333;
 	height:15px;
 	}
 	
@@ -117,7 +116,7 @@ input {
 footer {
 	width:400px;
 	padding:10px;
-	color:white;
+	color:#fff;
 	margin:0 auto 0 auto;
 	font-size:14px;
 	}	
