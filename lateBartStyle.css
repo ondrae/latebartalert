@@ -34,20 +34,21 @@ header{
 	}
 	
 #head{
-	width:800px;
+	width:400px;
 	margin: 0 auto 0 auto;
 	background:white;
 	height:100%;
 	margin-top:15px;
 	}	
 
+/*
 #tagline{
 	width:350px;
 	float:right;
 	padding:10px;
 	font-size:18px;
 	}
-	
+*/
 #sectionBackground{
 	background:url(watchBG.png) bottom right no-repeat #9999cc; 
 	}

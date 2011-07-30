@@ -48,13 +48,14 @@ function echoArray($array){
 	</div><!--/hat-->
 	
 	<div id="head">
-		<div id="tagline">
-			Late BART Alert will send you a text message if your train is going to be late. Sign up now to join our beta.
-		</div><!--/tagline-->
 	
 		<div id="title">
 			<a href="http://www.latebartalert.com"><img src="lateBartAlertLogoWhiteBG.original.png" alt="" /></a>
 		</div><!--/title-->
+	
+		<div id="tagline">
+			Late BART Alert will send you a text message if your train is going to be late. Sign up now to join our beta.
+		</div><!--/tagline-->	
 	
 	</div><!--/head-->		
 	</header>
