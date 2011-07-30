@@ -60,10 +60,10 @@ function echoArray($array){
 	</header>
 	
 	<div id="sectionBackground">
-	<section>
-	<h2>Which Train Do you Catch?</h2>
+	<section>	
 		<form method="post" action="handleForm.php">
 			<fieldset>
+			<h2>Which Train Do you Catch?</h2>
 			<ol>	
 				<li>
 				<label for="startStation">Station you start at:</label> 
