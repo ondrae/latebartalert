@@ -133,7 +133,7 @@ foreach ($routeNumbers as $num){
 	}
 
 //Turn array into quoted, comma separated, string
-$affectedStations = join("','", $commuterStations);
+$affectedStations = implode("','", $commuterStations);
 $affectedStations = "'". $affectedStations . "'";
 
 print $startStation[0];
@@ -148,6 +148,8 @@ print $affectedStations;
 
 //Establish query to insert data to MySQL table
 $insert = "INSERT INTO $table VALUES ('','$startStation[0]','$time','$endStation[0]','$phone','$affectedStations')";
+
+print $insert;
 
 openDatabase();
 
