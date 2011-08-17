@@ -18,7 +18,7 @@ $cleanEndStation = cleanPeriods($postEndStation);
 
 //Establish variables names from form
 $startStation = array($_POST['startStation']);
-print_r($startStation);
+//print_r($startStation);
 $time = $_POST['time'];
 $endStation = array($_POST['endStation']);
 //print_r($endStation);
@@ -35,7 +35,7 @@ function getStationNames($apiKey){
 		$stationNameAbbrList[] = $xml_stationList->stations->station[$i]->name;
 		$stationNameAbbrList[] = $xml_stationList->stations->station[$i]->abbr;
 	}
-	print_r($stationNameAbbrList);
+	//print_r($stationNameAbbrList);
 	return $stationNameAbbrList;
 }
 
@@ -60,12 +60,14 @@ function getAbbr($names, $apiKey){
 			$abbr[] = "DALY";
 			}
 		$nameKey = array_search($names[$i], $stationNameAbbrList);
-		debug_backtrace();
+		//debug_backtrace();
 		if($nameKey!=""){
 			$abbr[] = $stationNameAbbrList[$nameKey+1];
 			}
 		}
+	print_r($abbr);
 	$abbr = cleanArray($abbr);
+	print_r($abbr);
 	return $abbr;
 	}
 	
