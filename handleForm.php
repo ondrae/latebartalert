@@ -33,9 +33,6 @@ function getAbbr($names, $apiKey){
 		//$twelvethKey = array_search('12th St. Oakland City Center', $names);
 		//print $twelvethKey;
 		//print_r($names);
-		if(in_array('12th St. Oakland City Center', $names)){
-			$abbr[] = "12TH";
-			}
 		if($names[$i]=="SFO"){
 			$abbr[] = "SFIA";
 			}
@@ -52,7 +49,7 @@ function getAbbr($names, $apiKey){
 			}
 		$nameKey = array_search($names[$i], $stationNameAbbrList);
 		//print $nameKey;
-		if($nameKey!=""){
+		if(is_int($nameKey)){
 			$abbr[] = $stationNameAbbrList[$nameKey+1];
 			}
 		}
