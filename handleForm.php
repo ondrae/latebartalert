@@ -53,9 +53,7 @@ function getAbbr($names, $apiKey){
 			$abbr[] = $stationNameAbbrList[$nameKey+1];
 			}
 		}
-	print_r($abbr);
 	$abbr = cleanArray($abbr);
-	print_r($abbr);
 	return $abbr;
 	}
 	
