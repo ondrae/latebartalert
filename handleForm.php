@@ -1,6 +1,6 @@
 <?php
 include 'sqlConnect.php';
-include 'cleanStationNames.php';
+//include 'cleanStationNames.php';
 /*
 function cleanPeriods($name){
 	$name = str_split($name);
@@ -45,6 +45,9 @@ function getAbbr($names, $apiKey){
 	$stationNameAbbrList = getStationNames($apiKey);
 	//print_r($stationNameAbbrList);
 	for($i=0;$i<count($names);$i++){
+		if(array_search('12th', $names)){
+			$abbr[] = "12th";
+			}
 		if($names[$i]=="SFO"){
 			$abbr[] = "SFIA";
 			}
@@ -60,14 +63,14 @@ function getAbbr($names, $apiKey){
 			$abbr[] = "DALY";
 			}
 		$nameKey = array_search($names[$i], $stationNameAbbrList);
-		print $nameKey;
+		//print $nameKey;
 		if($nameKey!=""){
 			$abbr[] = $stationNameAbbrList[$nameKey+1];
 			}
 		}
-	print_r($abbr);
+	//print_r($abbr);
 	$abbr = cleanArray($abbr);
-	print_r($abbr);
+	//print_r($abbr);
 	return $abbr;
 	}
 	
