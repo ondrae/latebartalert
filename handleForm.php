@@ -133,7 +133,7 @@ foreach ($routeNumbers as $num){
 	}
 
 //Turn array into quoted, comma separated, string
-$affectedStations = implode("','", $commuterStations);
+$affectedStations = implode(",", $commuterStations);
 
 print $startStation[0];
 print '<br/>';
