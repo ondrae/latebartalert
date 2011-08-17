@@ -45,8 +45,8 @@ function getAbbr($names, $apiKey){
 	$stationNameAbbrList = getStationNames($apiKey);
 	//print_r($stationNameAbbrList);
 	for($i=0;$i<count($names);$i++){
-		if(array_search('12th', $names)){
-			$abbr[] = "12th";
+		if(array_search('12th St. Oakland City Center', $names)){
+			$abbr[] = "12TH";
 			}
 		if($names[$i]=="SFO"){
 			$abbr[] = "SFIA";
