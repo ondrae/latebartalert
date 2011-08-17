@@ -136,6 +136,14 @@ foreach ($routeNumbers as $num){
 $affectedStations = join("','", $commuterStations);
 $affectedStations = "'". $affectedStations . "'";
 
+print $startStation[0];
+print '<br/>';
+print $time;
+print '<br/>';
+print $endStation[0];
+print '<br/>';
+print $phone;
+print '<br/>';
 print $affectedStations;
 
 //Establish query to insert data to MySQL table
@@ -192,6 +200,7 @@ mysql_close();
 		echo " ". $startStation[0] . " leaving around " . $time . " headed towards " . $endStation[0] . " is late. ";
 		?>	
 	 If you want to sign up for another train, maybe for your evening commute, then click <a href="http://www.latebartalert.com">here</a>.	
+	
 	</section>
 
 	</div><!--/sectonBackground-->
