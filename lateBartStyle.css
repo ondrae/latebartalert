@@ -25,7 +25,7 @@ h2{
 		
 header{
 	background:white;
-	height:165px;
+	height:160px;
 	}
 
 #hat{
@@ -37,8 +37,7 @@ header{
 	width:480px;
 	margin: 0 auto 0 auto;
 	background:white;
-	height:100%;
-	margin-top:15px;
+	margin-top:10px;
 	}	
 
 #sectionBackground{
@@ -81,7 +80,7 @@ form select{
 input {   
     border-color:#333;
     border-width:1px;
-    width: 457px;
+    width: 465px;
     font-size:20px;
     border-radius:10px;
 	-moz-border-radius: 10px;
