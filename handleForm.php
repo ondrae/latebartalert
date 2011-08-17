@@ -15,6 +15,7 @@ $cleanStartStation = cleanPeriods($postStartStation);
 $postEndStation = $_POST['endStation'];
 $cleanEndStation = cleanPeriods($postEndStation);
 */
+
 //Establish variables names from form
 $startStation = array($_POST['startStation']);
 //print_r($startStation);
@@ -100,20 +101,20 @@ foreach ($routeNumbers as $num){
 	foreach($xml_List->routes->route->config->station as $station){
 		$fullStationList[] = $station;	
 	}
-	//print 'Station list for route number '.$num.'<br/>';
-	//print '<br/> The Starting station: '.$startStation[0].'<br/>';	
+	print 'Station list for route number '.$num.'<br/>';
+	print '<br/> The Starting station: '.$startStation[0].'<br/>';	
 	$startKey = array_search($startStation[0], $fullStationList);
-	//print '<br/>FOund start key: '.$startKey.'<br/>';
+	print '<br/>Found start key: '.$startKey.'<br/>';
 	if(is_int($startKey)){
 		$endKey = array_search($endStation[0], $fullStationList);
-		//print '<br/>Found end key: '.$endKey.'<br/>';
+		print '<br/>Found end key: '.$endKey.'<br/>';
 		//Figure out order of keys
 		if(is_int($endKey)){
 			if($endKey>$startKey){
 				for($i=0;$i<=($endKey-$startKey);$i++){
 					$commuterStations[] = $fullStationList[$i+$startKey];
 					}
-				//print_r($commuterStations);
+				print_r($commuterStations);
 				break;
 				}
 			elseif($startKey>$endKey){
@@ -179,7 +180,7 @@ mysql_close();
 	
 	Awesome. We'll send you a text, email, or tweet whenever the train from 
 	<?php 
-		echo " ". $startStation[0] . "leaving around " . $time . " headed towards" . $endStation[0] . "is late. ";
+		echo " ". $startStation[0] . " leaving around " . $time . " headed towards " . $endStation[0] . " is late. ";
 		?>	
 	 If you want to sign up for another train, maybe for your evening commute, then click <a href="http://www.latebartalert.com">here</a>.	
 	</section>
