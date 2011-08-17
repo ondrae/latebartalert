@@ -1,7 +1,7 @@
 /* 
 Late BART Alert Stylesheet
-v0.2
-Last Updated: 06-01-2011
+v0.3
+Last Updated: 08-16-2011
 Author: Andrew Hyder Http://hackyourcity.com 
 Twitter: @ondrae
 */
@@ -34,33 +34,25 @@ header{
 	}
 	
 #head{
-	width:400px;
+	width:480px;
 	margin: 0 auto 0 auto;
 	background:white;
 	height:100%;
 	margin-top:15px;
 	}	
 
-/*
-#tagline{
-	width:350px;
-	float:right;
-	padding:10px;
-	font-size:18px;
-	}
-*/
 #sectionBackground{
 	background:url(watchBG.png) bottom right no-repeat #9999cc; 
 	}
 
 section {
-	width:500px;
+	width:480px;
 	margin:0 auto 0 auto;
 	padding: 15px 0 15px 0;
 	}
 
 fieldset {
-	width: 400px;
+	width: 480px;
 	margin: 0 auto 0 auto;
 	padding-top:10px;
 	}
@@ -80,7 +72,7 @@ form label
 	}
 
 form select{
-	width:399px;
+	width:479px;
 	border-color: #333;
 	display: block;
 	font-size:20px;
@@ -89,7 +81,7 @@ form select{
 input {   
     border-color:#333;
     border-width:1px;
-    width: 387px;
+    width: 457px;
     font-size:20px;
     border-radius:10px;
 	-moz-border-radius: 10px;
@@ -114,7 +106,7 @@ input {
 	}	
 
 footer {
-	width:400px;
+	width:480px;
 	padding:10px;
 	color:#fff;
 	margin:0 auto 0 auto;
