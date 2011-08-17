@@ -1,24 +1,9 @@
 <?php
 include 'sqlConnect.php';
-//include 'cleanStationNames.php';
-/*
-function cleanPeriods($name){
-	$name = str_split($name);
-	$pKey = array_search('.',$name);
-	$name[$pKey] = '\.';
-	$name = implode($name);
-	return $name;
-}
-
-$postStartStation = $_POST['startStation'];
-$cleanStartStation = cleanPeriods($postStartStation);
-$postEndStation = $_POST['endStation'];
-$cleanEndStation = cleanPeriods($postEndStation);
-*/
 
 //Establish variables names from form
 $startStation = array($_POST['startStation']);
-print_r($startStation);
+//print_r($startStation);
 $time = $_POST['time'];
 $endStation = array($_POST['endStation']);
 //print_r($endStation);
@@ -45,7 +30,8 @@ function getAbbr($names, $apiKey){
 	$stationNameAbbrList = getStationNames($apiKey);
 	//print_r($stationNameAbbrList);
 	for($i=0;$i<count($names);$i++){
-		if(array_search('12th St. Oakland City Center', $names)){
+		$twelvethKey = array_search('12th St. Oakland City Center', $names);
+		if($twelvethKey!=""){
 			$abbr[] = "12TH";
 			}
 		if($names[$i]=="SFO"){
