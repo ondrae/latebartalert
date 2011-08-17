@@ -70,8 +70,7 @@ if ($currentAdvisory == "No delays reported."){
 //Else check in mysql for last adivsory to see if its changed
 		$column = "advisory";
 
-		mysql_connect($host,$username,$password) or die('woops');
-		mysql_select_db($database);
+		openDatabase();
 		
 		$query="SELECT * FROM $table";
 		$advisories=mysql_query($query);
@@ -83,12 +82,12 @@ if ($currentAdvisory == "No delays reported."){
 		
 		if($currentAdvisory == $lastAdvisory){
 			echo "The current advisory $currentAdvisory is still in effect <br />";
-			mysql_close();
+			//mysql_close();
 			} else {
 				echo "There is a brand new advisory of $currentAdvisory <br />";
 				$insert = "INSERT INTO $table VALUES ('','$currentStation','$currentAdvisory')";
 				mysql_query($insert);
-				mysql_close();
+				//mysql_close();
 				}
 	}
 
