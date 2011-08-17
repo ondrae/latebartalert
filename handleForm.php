@@ -35,7 +35,7 @@ function getStationNames($apiKey){
 		$stationNameAbbrList[] = $xml_stationList->stations->station[$i]->name;
 		$stationNameAbbrList[] = $xml_stationList->stations->station[$i]->abbr;
 	}
-	//print_r($stationNameAbbrList);
+	print_r($stationNameAbbrList);
 	return $stationNameAbbrList;
 }
 
