@@ -105,7 +105,7 @@ function fifteenMinutes(){
 				
 				<li>	
 				<label>What time do you catch your train?</label>
-				<select name="time" placeholder="Best guess is cool" type="text" />
+				<select name="time" />
 					<?php
 						fifteenMinutes();
 					?>
