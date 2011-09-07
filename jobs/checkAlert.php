@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 function checkAlert(){
 	include 'sqlConnect.php';
