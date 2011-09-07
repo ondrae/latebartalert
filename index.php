@@ -159,9 +159,6 @@ function echoArray($array){
 					<option value="12:00am">12:00am</option>
 					<option value="12:15am">12:15am</option>
 					<option value="12:30am">12:30am</option>
-					
-					
-					
 				</select>
 				</li>
 				

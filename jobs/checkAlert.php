@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 function checkAlert(){
-	include 'sqlConnect.php';
+	include '../sqlConnect.php';
 	//Check for a new BART alert
 	
 	$insert = "INSERT INTO formAnswers VALUES ('','TEST','TEST','TEST','TEST','TEST')";
