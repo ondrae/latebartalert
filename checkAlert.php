@@ -11,23 +11,21 @@ function checkAlert(){
 	$currentAdvisory = $xml_currentAdvisory->bsa->description;
 	
 	//If no advisories then say so and be done
-	if ($currentAdvisory == 'No delays reported'){
-		echo '1'.$currentAdvisory;
-	} else {
+	if ($currentAdvisory != 'No delays reported'){
 		//Else check in mysql for last advisory to see if its changed
 		$table = "advisories";
 		openDatabase();
 		$query="SELECT advisory FROM $table ORDER BY id DESC LIMIT 1";
 		$result=mysql_query($query);
 		$lastAdvisory = mysql_result($result, 0);
-		echo '2'.$lastAdvisory;
+		//echo $lastAdvisory;
 			
 		if($currentAdvisory == $lastAdvisory){
-			echo '3'."The current advisory $currentAdvisory is still in effect";
+			echo "The current advisory $currentAdvisory is still in effect";
 			mysql_close();
 		} else {
-			echo '4'."There is a brand new advisory of $currentAdvisory";
-			$insert = "INSERT INTO $table VALUES ('','$currentStation','$currentAdvisory')";
+			//echo "There is a brand new advisory of $currentAdvisory";
+			$insert = "INSERT INTO $table VALUES ('','$currentStation','$currentAdvisory','')";
 			mysql_query($insert);
 			mysql_close();
 		}
