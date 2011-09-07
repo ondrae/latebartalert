@@ -10,8 +10,11 @@ function checkAlert(){
 	$currentStation = $xml_currentAdvisory->bsa->station;
 	$currentAdvisory = $xml_currentAdvisory->bsa->description;
 	
+	echo 'Current station is $currentStation';
+	echo 'Current station is $currentAdvisory';
+	
 	//If no advisories then say so and be done
-	if ($currentAdvisory == "No delays reported."){
+	if ($currentStation){
 		echo $currentAdvisory;
 	} else {
 		//Else check in mysql for last advisory to see if its changed
