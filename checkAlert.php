@@ -10,8 +10,8 @@ function checkAlert(){
 	$currentStation = $xml_currentAdvisory->bsa->station;
 	$currentAdvisory = $xml_currentAdvisory->bsa->description;
 	
-	echo 'Current station is $currentStation';
-	echo 'Current station is $currentAdvisory';
+	echo 'Current station is ' . $currentStation;
+	echo 'Current station is ' . $currentAdvisory;
 	
 	//If no advisories then say so and be done
 	if ($currentStation){
