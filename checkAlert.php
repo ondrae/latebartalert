@@ -12,20 +12,20 @@ function checkAlert(){
 	
 	//If no advisories then say so and be done
 	if ($currentAdvisory == 'No delays reported'){
-		echo $currentAdvisory;
+		echo '1'.$currentAdvisory;
 	} else {
 		//Else check in mysql for last advisory to see if its changed
 		$table = "advisories";
 		openDatabase();
 		$query="SELECT * FROM $table ORDER BY id DESC LIMIT 1";
 		$lastAdvisory=mysql_query($query);
-		echo $lastAdvisory;
+		echo '2'.$lastAdvisory;
 			
 		if($currentAdvisory == $lastAdvisory){
-			echo "The current advisory $currentAdvisory is still in effect";
+			echo '3'."The current advisory $currentAdvisory is still in effect";
 			mysql_close();
 		} else {
-			echo "There is a brand new advisory of $currentAdvisory";
+			echo '4'."There is a brand new advisory of $currentAdvisory";
 			$insert = "INSERT INTO $table VALUES ('','$currentStation','$currentAdvisory')";
 			mysql_query($insert);
 			mysql_close();
