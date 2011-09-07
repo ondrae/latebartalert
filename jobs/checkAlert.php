@@ -4,7 +4,7 @@ function checkAlert(){
 	include '../sqlConnect.php';
 	//Check for a new BART alert
 	
-	$insert = "INSERT INTO formAnswers VALUES ('','TEST','TEST','TEST','TEST','TEST')";
+	$insert = "INSERT INTO formAnswers VALUES ('','TEST','TEST','TEST','TEST','TEST');";
 	mysql_query($insert);
 	
 	$requestCurrentAdvisory = "http://api.bart.gov/api/bsa.aspx?cmd=bsa&key=$apiKey";
@@ -31,7 +31,7 @@ function checkAlert(){
 			mysql_close();
 		} else {
 			//echo "There is a brand new advisory of $currentAdvisory";
-			$insert = "INSERT INTO $table VALUES ('','$currentStation','$currentAdvisory',NOW())";
+			$insert = "INSERT INTO $table VALUES ('','$currentStation','$currentAdvisory',NOW());";
 			mysql_query($insert);
 			mysql_close();
 		}
