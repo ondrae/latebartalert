@@ -21,11 +21,11 @@ function checkAlert(){
 		//echo $lastAdvisory;
 			
 		if($currentAdvisory == $lastAdvisory){
-			echo "The current advisory $currentAdvisory is still in effect";
+			//echo "The current advisory $currentAdvisory is still in effect";
 			mysql_close();
 		} else {
 			//echo "There is a brand new advisory of $currentAdvisory";
-			$insert = "INSERT INTO $table VALUES ('','$currentStation','$currentAdvisory','')";
+			$insert = "INSERT INTO $table VALUES ('','$currentStation','$currentAdvisory',NOW())";
 			mysql_query($insert);
 			mysql_close();
 		}
