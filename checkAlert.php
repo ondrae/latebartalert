@@ -34,4 +34,6 @@ function checkAlerts(){
 			}
 	}
 } 
+
+checkAlert();
 ?>
