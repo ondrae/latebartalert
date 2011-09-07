@@ -23,29 +23,29 @@ function echoArray($array){
 	}
 
 function fifteenMinutes(){
-	minute = 0;
-	hour = 4;
-	merideim = 'am';
-	i = 00; //Midnight switch
-	while (merideim !='am' && hour != 12 && minute != 30){
+	$minute = 0;
+	$hour = 4;
+	$merideim = 'am';
+	$i = 00; //Midnight switch
+	while ($merideim !='am' && $hour != 12 && $minute != 30){
 	//Last train is 12:30am
-		echo '<option value="'.hour.':'.minute.' '.merideim.'">'.hour.':'.minute.' '.merideim.'</option>';
+		echo '<option value="'.$hour.':'.$minute.' '.$merideim.'">'.$hour.':'.$minute.' '.$merideim.'</option>';
 
-		if (minute == 45){
-			minute = 0;
-			hour = hour + 1;
-			if (hour == 12 && minute == 0){
-				if (i == 0){
-					merideim = 'pm';
-					i = 1;
+		if ($minute == 45){
+			$minute = 0;
+			$hour = $hour + 1;
+			if ($hour == 12 && $minute == 0){
+				if ($i == 0){
+					$merideim = 'pm';
+					$i = 1;
 				}
 				else {
-					merideim = 'am';
+					$merideim = 'am';
 				}
 			}
 		}
 		else{
-			minute = minute + 15;
+			$minute = $minute + 15;
 		}
 	}
 }
