@@ -1,7 +1,8 @@
 <?php
-include 'sqlConnect.php';
+
 
 function checkAlert(){
+	include 'sqlConnect.php';
 	//Check for a new BART alert
 	echo $apiKey;
 	/*
