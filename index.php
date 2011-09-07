@@ -22,6 +22,31 @@ function echoArray($array){
 	echo "<br />";	
 	}
 
+function fifteenMinutes(){
+	minute = 0;
+	hour = 4;
+	merideim = 'am';
+	i = 00; //Midnight switch
+	while (merideim !='am' && hour != 12 && minute != 30){//Last train is 12:30am
+		echo '<option value="'.hour.':'.minute.' '.merideim.'">'.hour.':'.minute.' '.merideim.'</option>';
+
+		if (minute == 45){
+			minute = 0;
+			hour = hour + 1;
+		}
+		if (hour == 12 && minute == 0){
+			if (i == 0){
+				merideim = 'pm';
+				i = 1;
+			}
+			else {
+				merideim = 'am';
+			}
+		}
+		minute = minute + 15;
+	}
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -78,16 +103,9 @@ function echoArray($array){
 				<li>	
 				<label>What time do you catch your train?</label>
 				<select name="time" placeholder="Best guess is cool" type="text" />
-					<option value="6:00 am">6:00 am</option>
-					<option value="6:15am">6:15 am</option>
-					<option value="6:30am">6:30 am</option>
-					<option value="6:45am">6:45am</option>
-					<option value="7:00am">7:00am</option>
-					<option value="7:15am">7:15am</option>
-					<option value="6:15am">6:15am</option>
-					<option value="6:30am">6:30am</option>
-					<option value="6:45am">6:45am</option>
-					<option value="7:00am">7:00am</option>
+					<?php
+					fifteenMinutes();
+					?>
 				</select>
 				</li>
 				
@@ -115,7 +133,7 @@ function echoArray($array){
 	</div><!--/sectonBackground-->
 
 	<footer>
-		Late Bart is in still in Beta testing. It is being built by Andrew Hyder, an <a href="http://hackyourcity.com">Urban Hacker</a> from San Francisco.
+		Late Bart Alert is in still in Beta testing. It is being built by Andrew Hyder, an <a href="http://hackyourcity.com">Urban Hacker</a> from San Francisco.
 	</footer>
 	</div><!--/footerBackground-->
 
