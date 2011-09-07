@@ -23,13 +23,30 @@ function echoArray($array){
 	}
 
 function fifteenMinutes(){
-	$times = array();
-	$time = strtotime("00:00:00");
-	$times["00:00:00"] = date("g:i a",$time);
-	for($i = 1;$i < 48;$i++) {
-		$time = strtotime("+ 15 minutes",$time);
-		$key = date("H:i:s",$time);
-		$times[$key] = date("g:i a",$time);
+	minute = 0;
+	hour = 4;
+	merideim = 'am';
+	i = 00; //Midnight switch
+	while (merideim !='am' && hour != 12 && minute != 30){
+	//Last train is 12:30am
+		echo '<option value="'.hour.':'.minute.' '.merideim.'">'.hour.':'.minute.' '.merideim.'</option>';
+
+		if (minute == 45){
+			minute = 0;
+			hour = hour + 1;
+			if (hour == 12 && minute == 0){
+				if (i == 0){
+					merideim = 'pm';
+					i = 1;
+				}
+				else {
+					merideim = 'am';
+				}
+			}
+		}
+		else{
+			minute = minute + 15;
+		}
 	}
 }
 
