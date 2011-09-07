@@ -2,7 +2,7 @@
 <?php
 include 'sqlConnect.php';
 
-function checkAlerts(){
+function checkAlert(){
 	//Check for a new BART alert
 	$requestCurrentAdvisory = "http://api.bart.gov/api/bsa.aspx?cmd=bsa&key".$apiKey;
 	$xml_currentAdvisory = simplexml_load_file($requestCurrentAdvisory) or die("feed not loading");
@@ -13,7 +13,7 @@ function checkAlerts(){
 	
 	//If no advisories then say so and be done
 	if ($currentAdvisory == "No delays reported."){
-		return $currentAdvisory
+		return $currentAdvisory;
 	} else {
 		//Else check in mysql for last adivsory to see if its changed
 		$table = "advisories";
