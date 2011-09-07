@@ -3,7 +3,7 @@ include 'sqlConnect.php';
 
 function checkAlert(){
 	//Check for a new BART alert
-	$requestCurrentAdvisory = "http://api.bart.gov/api/bsa.aspx?cmd=bsa&key".$apiKey;
+	$requestCurrentAdvisory = "http://api.bart.gov/api/bsa.aspx?cmd=bsa&key=".$apiKey;
 	$xml_currentAdvisory = simplexml_load_file($requestCurrentAdvisory) or die("feed not loading");
 	echo $xml_currentAdvisory;
 	
