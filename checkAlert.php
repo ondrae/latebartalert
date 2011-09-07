@@ -1,4 +1,3 @@
-//Check BARTs API every minute for a new alert.
 <?php
 include 'sqlConnect.php';
 
@@ -13,16 +12,17 @@ function checkAlert(){
 	
 	//If no advisories then say so and be done
 	if ($currentAdvisory == "No delays reported."){
-		return $currentAdvisory;
+		echo $currentAdvisory;
 	} else {
-		//Else check in mysql for last adivsory to see if its changed
+		//Else check in mysql for last advisory to see if its changed
 		$table = "advisories";
 		openDatabase();
-		$query="SELECT * FROM $table";
-		$advisories=mysql_query($query);
+		$query="SELECT * FROM $table ORDER BY id DESC LIMIT 1";
+		$advisory=mysql_query($query);
+		echo $advisory;
 		//Latest advisory in table		
-		$num=mysql_numrows($advisories) - 1;
-		$lastAdvisory=mysql_result($advisories,$num,"advisory");
+		$num=mysql_numrows($advisoriesy) - 1;
+		$lastAdvisory=mysql_result($advisory,$num,"advisory");
 		if($currentAdvisory == $lastAdvisory){
 			echo "The current advisory $currentAdvisory is still in effect <br />";
 			mysql_close();
