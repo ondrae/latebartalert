@@ -11,7 +11,7 @@ function checkAlert(){
 	$currentStation = $xml_currentAdvisory->bsa->station;
 	$currentAdvisory = $xml_currentAdvisory->bsa->description;
 	
-	echo $currentAdvisory;
+	//echo $currentAdvisory;
 	
 	//If no advisories then say so and be done
 	if ($currentAdvisory != 'No delays reported'){
