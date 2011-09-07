@@ -18,7 +18,8 @@ function checkAlert(){
 		$table = "advisories";
 		openDatabase();
 		$query="SELECT * FROM $table ORDER BY id DESC LIMIT 1";
-		$lastAdvisory=mysql_query($query);
+		$result=mysql_query($query);
+		$lastAdvisory = mysql_result($result, 0, 'advisory')
 		echo '2'.$lastAdvisory;
 			
 		if($currentAdvisory == $lastAdvisory){
