@@ -27,7 +27,16 @@ function fifteenMinutes(){
 	$hour = 4;
 	$merideim = 'am';
 	$i = 00; //Midnight switch
-	while ($merideim !='am' && $hour != 12 && $minute != 30){
+	$x = 0;	
+				
+	while ($x == 0){
+		if ($merideim == 'am'){
+			if($minute == 15){
+				if($hour == 12){
+					$x = 1;
+				}
+			}
+		}	
 	//Last train is 12:30am
 		echo '<option value="'.$hour.':'.$minute.' '.$merideim.'">'.$hour.':'.$minute.' '.$merideim.'</option>';
 
