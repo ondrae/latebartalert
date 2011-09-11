@@ -1,1 +1,0 @@
-*/1 * * * * "~/current/jobs/checkAlert.php" >> test.txt
