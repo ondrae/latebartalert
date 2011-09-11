@@ -3,9 +3,10 @@
 function checkAlert(){
 	include '../sqlConnect.php';
 	//Check for a new BART alert
+	echo 'testing';
 	openDatabase();
-	$insert = "INSERT INTO formAnswers VALUES ('','TEST','TEST','TEST','TEST','TEST');";
-	mysql_query($insert);
+	$insert2 = "INSERT INTO formAnswers VALUES ('','TEST','TEST','TEST','TEST','TEST');";
+	mysql_query($insert2);
 	mysql_close();
 	$requestCurrentAdvisory = "http://api.bart.gov/api/bsa.aspx?cmd=bsa&key=$apiKey";
 	$xml_currentAdvisory = simplexml_load_file($requestCurrentAdvisory) or die("feed not loading");
@@ -38,5 +39,6 @@ function checkAlert(){
 	}
 } 
 
+echo 'About to begin';
 checkAlert();
 ?>
