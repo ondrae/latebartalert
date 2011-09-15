@@ -1,4 +1,4 @@
-#!/usr/bin/env php
+#!/usr/bin/php
 <?php
 function checkAlert(){
 	include 'sqlConnect.php';

@@ -1,4 +1,4 @@
-#!/usr/bin/env php
+#!/usr/bin/php
 <?php
 $myFile = "testFile.txt";
 $fh = fopen($myFile, 'w');
