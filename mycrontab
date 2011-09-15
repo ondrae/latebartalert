@@ -1,2 +1,2 @@
-*/1 * * * * "checkAlert.php"
-* * * * * "cronTest.php"
+*/1 * * * * php "checkAlert.php"
+*/1 * * * * php "cronTest.php"
