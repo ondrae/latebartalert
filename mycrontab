@@ -1,1 +1,2 @@
 */1 * * * * "checkAlert.php"
+* * * * * "cronTest.php"
