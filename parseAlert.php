@@ -1,7 +1,7 @@
 <?php
 include 'sqlConnect.php';
 include 'cleanStationNames.php';
-$whichAlert = 1;
+$whichAlert = 2;
 
 // Function Calls
 echo "<center>";
