@@ -12,6 +12,8 @@ function checkCommuters(){
    		//printf("ID: %s  Start Station: %s Time: %s End Station: %s Phone: %s Commute Stations: %s", $row[0], $row[1], $row[2], $row[3], $row[4], $row[5]); 
 		$commuteTime = date("g:i a", strtotime($row[3]));
 		echo $alertWindow = $commuteTime - $alertTime;
+		echo "\n";
+		echo "what";
 		
 	}
 	//echo $lastAdvisory;
