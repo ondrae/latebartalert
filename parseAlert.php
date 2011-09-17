@@ -8,27 +8,30 @@ echo "<center>";
 
 $lastAlert = getLastAlert($whichAlert);
 print_r($lastAlert);
-echoArray($lastAlert);
+//echoArray($lastAlert);
 
 $lastAlert = cleanAlert($lastAlert);
-print_r($lastAlert);
-echoArray($lastAlert);
+//print_r($lastAlert);
+//echoArray($lastAlert);
 
 echo "<br />Delayed Direction(s)<br />";
 $direction = getDirection($lastAlert);
-echoArray($direction);
+//echoArray($direction);
 print_r($direction);
 
-echo "<br />Delayed Direction(s) Abbriviation<br />";
-$directionAbbr = getAbbr($direction);
-echoArray($directionAbbr);
-print_r($directionAbbr);
-
-echo "<br />Delayed Station(s) Abbriviation<br />";
-$delayedStations = getDelayedStations($lastAlert);
-print_r($delayedStations);
-echoArray($delayedStations);
-
+if($direction!='') {
+	echo "<br />Delayed Direction(s) Abbriviation<br />";
+	$directionAbbr = getAbbr($direction);
+	//echoArray($directionAbbr);
+	print_r($directionAbbr);
+	
+	echo "<br />Delayed Station(s) Abbriviation<br />";
+	$delayedStations = getDelayedStations($lastAlert);
+	print_r($delayedStations);
+	//echoArray($delayedStations);
+}else{
+echo 'No Delays';
+}
 echo "</center>";
 
 /*--------------------------------------------------------------------*/
