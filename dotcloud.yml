@@ -1,6 +1,6 @@
 www:
   type: php
   requirements:
-    - twilio.github.com/pear
+    - pear-1.9.3
 db:
   type: mysql
