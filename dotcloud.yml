@@ -1,6 +1,4 @@
 www:
   type: php
-  requirements:
-    - pear-1.9.3
 db:
   type: mysql
