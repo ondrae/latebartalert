@@ -1,7 +1,7 @@
 <?php
 function checkCommuters(){
 	include 'sqlConnect.php';
-	echo date("g:i a", strtotime("now"))
+	echo date("g:i a", strtotime("now"));
 	echo "\n";
 	$table = "formAnswers";
 	openDatabase();
