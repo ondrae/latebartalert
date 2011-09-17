@@ -21,9 +21,3 @@ function checkCommuters(){
 
 checkCommuters();
 ?>
-
-
-c = 9:15am
-a = 9:07am
-
-if c - a < 30min
