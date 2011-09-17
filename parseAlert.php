@@ -225,17 +225,19 @@ function getStationNames(){
 	
 //Get the direction, returns an array with names in each element	
 function getDirection($lastAlert){
+	echo 'look for directions';
 	//one direction
 	$directionKey = array_search(('direction'), $lastAlert);
 	if($directionKey!=""){
+		echo 'found one direction';
 		$direction[] = $lastAlert[$directionKey - 1];
 		$direction = array_reverse($direction);
 		return $direction;	
 	}else{
 		//multiple directions
 		$directionKey = array_search('directions', $lastAlert);
-		echo 'Directions';
 		if($directionKey!=""){
+			echo 'found two directions';
 			for($i=0;$i<count($lastAlert);$i++){
 				$direction[] = $lastAlert[$directionKey - ($i+1)];
 				if(end($direction)=="the"){
@@ -244,9 +246,10 @@ function getDirection($lastAlert){
 					return $direction;
 				}
 			}
+		}else{
+			echo 'found no directions';
 		}
-	}
-	echo "It doesn't say direction(s)!";	
+	}	
 }
 
 function removeComma($string){
