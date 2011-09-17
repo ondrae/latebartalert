@@ -1,6 +1,7 @@
 <?php
 function checkCommuters(){
 	include 'sqlConnect.php';
+	date_default_timezone_set('America/Los_Angeles');
 	echo date("g:i a", strtotime("now"));
 	echo "\n";
 	$table = "formAnswers";
