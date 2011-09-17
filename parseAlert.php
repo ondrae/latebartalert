@@ -1,7 +1,7 @@
 <?php
-include_once 'sqlConnect.php';
-include_once 'cleanStationNames.php';
-$whichAlert = 0;
+include 'sqlConnect.php';
+include 'cleanStationNames.php';
+$whichAlert = 1;
 
 // Function Calls
 echo "<center>";
@@ -262,9 +262,9 @@ function getLastAlert($whichAlert){
 	$table = "advisories";
 	$column = "advisory";		
 	$query="SELECT * FROM $table";
-	$advisories=mysql_query($query);		
-	$num=mysql_numrows($advisories) - $whichAlert;
-	$lastAlert=mysql_result($advisories,$num,$column);
+	$result=mysql_query($query);		
+	$num=mysql_numrows($result) - $whichAlert;
+	$lastAlert=mysql_result($result,$num,$column);
 	mysql_close();
 	$lastAlert = explode(" ", $lastAlert); //Turn alert into array
 	if(end($lastAlert)==""){
