@@ -7,11 +7,11 @@ $whichAlert = 2;
 echo "<center>";
 
 $lastAlert = getLastAlert($whichAlert);
-print_r($lastAlert);
+//print_r($lastAlert);
 //echoArray($lastAlert);
 
 $lastAlert = cleanAlert($lastAlert);
-//print_r($lastAlert);
+print_r($lastAlert);
 //echoArray($lastAlert);
 
 echo "<br />Delayed Direction(s)<br />";
@@ -234,6 +234,7 @@ function getDirection($lastAlert){
 	}else{
 		//multiple directions
 		$directionKey = array_search('directions', $lastAlert);
+		echo 'Directions';
 		if($directionKey!=""){
 			for($i=0;$i<count($lastAlert);$i++){
 				$direction[] = $lastAlert[$directionKey - ($i+1)];
