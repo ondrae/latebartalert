@@ -1,7 +1,7 @@
 <?php
 include 'sqlConnect.php';
 include 'cleanStationNames.php';
-
+$whichAlert = 4
 //Parses alert and returns array of delayed stations.
 function alertParser(){
 	//Query last alert and turn it into an array.
@@ -248,13 +248,13 @@ function removeComma($string){
 
 /*----------------------------------------------------------------*/
 //Gets the Last Advisory, returns an array, the last element is always empty
-function getLastAlert(){
+function getLastAlert($whichAlert){
 	openDatabase();
 	$table = "advisories";
 	$column = "advisory";		
 	$query="SELECT * FROM $table";
 	$result=mysql_query($query);		
-	$num=mysql_numrows($result);
+	$num=mysql_numrows($result) - $whichAlert;
 	$lastAlert=mysql_result($result,$num,$column);
 	mysql_close();
 	$lastAlert = explode(" ", $lastAlert); //Turn alert into array
