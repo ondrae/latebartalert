@@ -1,6 +1,4 @@
 <?php
-$alert = 'what, what';
-$contactInfo[] = '4153074175';
 
 function sendAlerts($alert, $contactInfo){
 	// Include the PHP TwilioRest library
@@ -17,14 +15,7 @@ function sendAlerts($alert, $contactInfo){
 
 	// Iterate over all our server admins
     foreach ($contactInfo as $to) {
-        // Send a new outgoinging SMS by POST'ing to the SMS resource
-        print $from;
-        print $to;
-        print $alert;
         $client->account->sms_messages->create($from, $to, $alert);
     }
-    print 'Did it work?';
 }
-
-sendAlerts($alert, $contactInfo);
 ?>
