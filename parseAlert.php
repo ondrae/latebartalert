@@ -1,7 +1,7 @@
 <?php
 include 'sqlConnect.php';
 include 'cleanStationNames.php';
-$whichAlert = 4
+$whichAlert = 4;
 alertParser($whichAlert);
 
 //Parses alert and returns array of delayed stations.
