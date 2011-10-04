@@ -16,11 +16,14 @@ function sendAlerts($alert, $contactInfo){
 	$from= '4156250104';
 
 	// Iterate over all our server admins
-    foreach ($contectInfo as $to) {
+    foreach ($contactInfo as $to) {
         // Send a new outgoinging SMS by POST'ing to the SMS resource
+        print $from;
+        print $to;
+        print $alert;
         $client->account->sms_messages->create($from, $to, $alert);
     }
-	print $message->sid;
+    print 'Did it work?';
 }
 
 sendAlerts($alert, $contactInfo);
