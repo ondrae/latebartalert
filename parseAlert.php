@@ -2,8 +2,10 @@
 include 'sqlConnect.php';
 include 'cleanStationNames.php';
 $whichAlert = 4
+alertParser($whichAlert);
+
 //Parses alert and returns array of delayed stations.
-function alertParser(){
+function alertParser($whichAlert){
 	//Query last alert and turn it into an array.
 	$lastAlert = getLastAlert($whichAlert);
 	//Clean up some of the test.
