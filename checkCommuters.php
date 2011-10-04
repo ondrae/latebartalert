@@ -17,14 +17,7 @@ function checkCommuters(){
 		$commuteStations = $row[5];
 		//Check time first, then stations
 		$alertWindow = $commuteTime - $alertTime;
-		print $commuteTime;
-		
-		
-		//if ($alertWindow < 15) {
-		//	foreach($commuteStations as $sta){
-				
-		//	}
-		}
+		print_r($commuteTime);
 	}
 	//echo $lastAdvisory;
 	mysql_close();
