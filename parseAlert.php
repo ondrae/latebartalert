@@ -1,38 +1,22 @@
 <?php
 include 'sqlConnect.php';
 include 'cleanStationNames.php';
-$whichAlert = 4;
 
-// Function Calls
-echo "<center>";
-
-$lastAlert = getLastAlert($whichAlert);
-//print_r($lastAlert);
-//echoArray($lastAlert);
-
-$lastAlert = cleanAlert($lastAlert);
-print_r($lastAlert);
-//echoArray($lastAlert);
-
-echo "<br />Delayed Direction(s)<br />";
-$direction = getDirection($lastAlert);
-//echoArray($direction);
-print_r($direction);
-
-if($direction!='') {
-	echo "<br />Delayed Direction(s) Abbriviation<br />";
+//Parses alert and returns array of delayed stations.
+function alertParser(){
+	//Query last alert and turn it into an array.
+	$lastAlert = getLastAlert($whichAlert);
+	//Clean up some of the test.
+	$lastAlert = cleanAlert($lastAlert);
+	//Pull out direction of delay.
+	$direction = getDirection($lastAlert);
+	//Get directions abbreviation.
 	$directionAbbr = getAbbr($direction);
-	//echoArray($directionAbbr);
-	print_r($directionAbbr);
-	
-	echo "<br />Delayed Station(s) Abbriviation<br />";
+	//Get array of all delayed stations.
 	$delayedStations = getDelayedStations($lastAlert);
 	print_r($delayedStations);
-	//echoArray($delayedStations);
-}else{
-echo 'No Delays';
+	return $delayedStations;
 }
-echo "</center>";
 
 /*--------------------------------------------------------------------*/
 
@@ -264,13 +248,13 @@ function removeComma($string){
 
 /*----------------------------------------------------------------*/
 //Gets the Last Advisory, returns an array, the last element is always empty
-function getLastAlert($whichAlert){
+function getLastAlert(){
 	openDatabase();
 	$table = "advisories";
 	$column = "advisory";		
 	$query="SELECT * FROM $table";
 	$result=mysql_query($query);		
-	$num=mysql_numrows($result) - $whichAlert;
+	$num=mysql_numrows($result);
 	$lastAlert=mysql_result($result,$num,$column);
 	mysql_close();
 	$lastAlert = explode(" ", $lastAlert); //Turn alert into array
