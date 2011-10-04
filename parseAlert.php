@@ -1,7 +1,7 @@
 <?php
 include 'sqlConnect.php';
 include 'cleanStationNames.php';
-$whichAlert = 2;
+$whichAlert = 4;
 
 // Function Calls
 echo "<center>";
@@ -225,7 +225,7 @@ function getStationNames(){
 	
 //Get the direction, returns an array with names in each element	
 function getDirection($lastAlert){
-	echo 'look for directions';
+	//echo 'look for directions';
 	//one direction
 	$directionKey = array_search(('direction'), $lastAlert);
 	if($directionKey!=""){
