@@ -1,13 +1,12 @@
 <?php
 include 'sqlConnect.php';
 include 'cleanStationNames.php';
-$whichAlert = 4;
-alertParser($whichAlert);
+
 
 //Parses alert and returns array of delayed stations.
-function alertParser($whichAlert){
+function alertParser(){
 	//Query last alert and turn it into an array.
-	$lastAlert = getLastAlert($whichAlert);
+	$lastAlert = getLastAlert();
 	//Clean up some of the test.
 	$lastAlert = cleanAlert($lastAlert);
 	//Pull out direction of delay.
@@ -16,7 +15,6 @@ function alertParser($whichAlert){
 	$directionAbbr = getAbbr($direction);
 	//Get array of all delayed stations.
 	$delayedStations = getDelayedStations($lastAlert);
-	print_r($delayedStations);
 	return $delayedStations;
 }
 
@@ -215,7 +213,7 @@ function getDirection($lastAlert){
 	//one direction
 	$directionKey = array_search(('direction'), $lastAlert);
 	if($directionKey!=""){
-		echo 'found one direction';
+		//echo 'found one direction';
 		$direction[] = $lastAlert[$directionKey - 1];
 		$direction = array_reverse($direction);
 		return $direction;	
@@ -223,7 +221,7 @@ function getDirection($lastAlert){
 		//multiple directions
 		$directionKey = array_search('directions', $lastAlert);
 		if($directionKey!=""){
-			echo 'found two directions';
+			//echo 'found two directions';
 			for($i=0;$i<count($lastAlert);$i++){
 				$direction[] = $lastAlert[$directionKey - ($i+1)];
 				if(end($direction)=="the"){
@@ -233,7 +231,7 @@ function getDirection($lastAlert){
 				}
 			}
 		}else{
-			echo 'found no directions';
+			//echo 'found no directions';
 		}
 	}	
 }
@@ -250,13 +248,13 @@ function removeComma($string){
 
 /*----------------------------------------------------------------*/
 //Gets the Last Advisory, returns an array, the last element is always empty
-function getLastAlert($whichAlert){
+function getLastAlert(){
 	openDatabase();
 	$table = "advisories";
 	$column = "advisory";		
 	$query="SELECT * FROM $table";
 	$result=mysql_query($query);		
-	$num=mysql_numrows($result) - $whichAlert;
+	$num=mysql_numrows($result);
 	$lastAlert=mysql_result($result,$num,$column);
 	mysql_close();
 	$lastAlert = explode(" ", $lastAlert); //Turn alert into array

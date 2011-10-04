@@ -9,12 +9,22 @@ function checkCommuters(){
 	$query="SELECT * FROM $table";
 	$result=mysql_query($query);
 	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
-   		//printf("ID: %s  Start Station: %s Time: %s End Station: %s Phone: %s Commute Stations: %s", $row[0], $row[1], $row[2], $row[3], $row[4], $row[5]); 
-		$commuteTime = date("g:i a", strtotime($row[3]));
-		echo $alertWindow = $commuteTime - $alertTime;
-		echo "\n";
-		echo "what";
+   		$commuterID = $row[0];
+		$startStation = $row[1];
+		$commuteTime = date("g:i a", strtotime($row[2]));
+		$endStation = $row[3];
+		$phone = $row[4];
+		$commuteStations = $row[5];
+		//Check time first, then stations
+		$alertWindow = $commuteTime - $alertTime;
+		print $commuteTime;
 		
+		
+		//if ($alertWindow < 15) {
+		//	foreach($commuteStations as $sta){
+				
+		//	}
+		}
 	}
 	//echo $lastAdvisory;
 	mysql_close();
