@@ -9,19 +9,15 @@ function checkAlert(){
 	//Set Station variable - Currently always system wide BART
 	$currentStation = $xml_currentAdvisory->bsa->station;
 	$currentAdvisory = $xml_currentAdvisory->bsa->description;
-	
-	//echo $currentAdvisory;
-	
+
 	//If no advisories then say so and be done
-	if ($currentAdvisory != 'No delays reported'){
+	if ($currentAdvisory != 'No delays reported.'){
 		//Else check in mysql for last advisory to see if its changed
 		$table = "advisories";
 		openDatabase();
 		$query="SELECT advisory FROM $table ORDER BY id DESC LIMIT 1";
 		$result=mysql_query($query);
 		$lastAdvisory = mysql_result($result, 0);
-		//echo $lastAdvisory;
-			
 		if($currentAdvisory == $lastAdvisory){
 			//echo "The current advisory $currentAdvisory is still in effect";
 			mysql_close();
@@ -30,6 +26,11 @@ function checkAlert(){
 			$insert = "INSERT INTO $table VALUES ('','$currentStation','$currentAdvisory',NOW());";
 			mysql_query($insert);
 			mysql_close();
+			include parseAlert.php;
+			$delayedStations = alertParser();
+			include checkCommuters.php;
+			$contactInfo = checkCommuters($delayedStations);
+			include sendAlert.php;
 		}
 	}
 } 
