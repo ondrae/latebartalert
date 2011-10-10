@@ -1,6 +1,6 @@
 <?php
 include 'sqlConnect.php';
-include_once 'fifteenMinutes.php';
+include 'fifteenMinutes.php';
 
 //Access the BART API and get the full station list
 $requestStationList = "http://api.bart.gov/api/stn.aspx?cmd=stns&key=".$apiKey;
