@@ -30,7 +30,8 @@ function checkAlert(){
 			$delayedStations = alertParser();
 			include checkCommuters.php;
 			$contactInfo = checkCommuters($delayedStations);
-			include sendAlert.php;
+			include sendAlerts.php;
+			sendAlerts($currentAdvisory, $contactInfo);
 		}
 	}
 } 
