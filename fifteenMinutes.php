@@ -82,6 +82,6 @@ function fifteenMinutes(){
 		<option value="12:00 am">12:00 am</option>
 		<option value="12:15 am">12:15 am</option>
 		<option value="12:30 am">12:30 am</option>
-		"
+		";
 }
 ?>
