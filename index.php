@@ -41,11 +41,11 @@ function echoArray($array){
 	
 	</head>
 	
-<body>
+<body style="background: url(bg.png) repeat;>
 	<header>
 		<div class="topbar">
 			<div class="fill">
-				<div class="container" style="background:url(watchBG.png) bottom right no-repeat;">
+				<div class="container">
 					<a class="brand" href="#">Late BART</a>
 					<ul class="nav">
 					<li class="active"><a href="#">Home</a></li>
@@ -58,12 +58,12 @@ function echoArray($array){
 	</header>
 	
 	<section>
-		<div class="container">
+		<div class="container" style="background:url(watchBG.png) bottom right no-repeat;">
 		  <div class="hero-unit">
 			<center>
-			<h1>Late BART</h1>
-			<h2>Never be late to work again.</h2>
+			<h1>Never be late to work again.</h1>
 			<p>Sign up below to receive a text message whenever <i>your</i> train is going to be late.</p>
+			</center>
 		  </div>
 		
 			<div class="row">
@@ -72,13 +72,13 @@ function echoArray($array){
 						<fieldset>
 							<h2>Which Train Do you Catch?</h2>
 							<label for="startStation">Station you start at:</label>
-							<select name="startStation" required>
+							<select name="startStation" required class="span8">
 								<?php
 								listStations($xml_stationList);
 								?>
 							</select>
 							<label>What time do you catch your train?</label>
-							<select name="time" placeholder="Best guess is cool" type="text" />
+							<select name="time" placeholder="Best guess is cool" type="text" class="span8">
 								<option value="4:00 am">4:00 am</option>
 								<option value="4:15 am">4:15 am</option>
 								<option value="4:30 am">4:30 am</option>
@@ -162,24 +162,28 @@ function echoArray($array){
 								<option value="12:30 am">12:30 am</option>	
 							</select>
 							<label for="endStation">Station you end at:</label>
-							<select name="endStation" required>
+							<select name="endStation" required class="span8">
 								<?php
 								listStations($xml_stationList);
 								?>
 							</select>
 							<label>Phone number:</label>
+							<input type="text" class="xlarge" name="phone" placeholder="415-NOT-LATE" /> <br />
 							<input type="submit" class="btn primary" value="Sign Up">
 						</fieldset>
 					</form>
 				</div>
 			</div>
+			</div>
 	</section>
 
 	<footer>
+		<div class="container">
 		<div class="row">
 			<div class="span10 offset3">
 				Late Bart Alert is in still in Beta testing. It is being built by Andrew Hyder, an <a href="http://hackyourcity.com">Urban Hacker</a> from San Francisco.
 			</div>
+		</div>
 		</div>
 	</footer>
 
