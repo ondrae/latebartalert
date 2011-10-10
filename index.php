@@ -41,7 +41,7 @@ function echoArray($array){
 	
 	</head>
 	
-<body style="background: url(bg.png) repeat;>
+<body style="background: url(bg.png) repeat;">
 	<header>
 		<div class="topbar">
 			<div class="fill">
