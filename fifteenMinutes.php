@@ -1,5 +1,5 @@
 <?php
-function fifteenMinutes(){
+function fifteen_minutes(){
 	echo "<option value="4:00 am">4:00 am</option>";
 	echo "<option value="4:15 am">4:15 am</option>";
 	echo "<option value="4:30 am">4:30 am</option>";

@@ -79,7 +79,7 @@ function echoArray($array){
 							<label>What time do you catch your train?</label>
 							<select name="time" placeholder="Best guess is cool" type="text" />
 								<?php
-								fifteenMinutes();
+								fifteen_minutes();
 								?>		
 							</select>
 							<label for="endStation">Station you end at:</label>
