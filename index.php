@@ -45,7 +45,7 @@ function echoArray($array){
 	<header>
 		<div class="topbar">
 			<div class="fill">
-				<div class="container">
+				<div class="container" style="background:url(watchBG.png) bottom right no-repeat;">
 					<a class="brand" href="#">Late BART</a>
 					<ul class="nav">
 					<li class="active"><a href="#">Home</a></li>
@@ -60,8 +60,10 @@ function echoArray($array){
 	<section>
 		<div class="container">
 		  <div class="hero-unit">
+			<center>
 			<h1>Late BART</h1>
-			<p>Late BART will send you a text message if your train is going to be late.</p>
+			<h2>Never be late to work again.</h2>
+			<p>Sign up below to receive a text message whenever <i>your</i> train is going to be late.</p>
 		  </div>
 		
 			<div class="row">
