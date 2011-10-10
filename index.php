@@ -66,7 +66,7 @@ function echoArray($array){
 		
 			<div class="row">
 				<div class="span10 offset3">
-					<form method="post" action="handleForm.php">
+					<form class="form-stacked" method="post" action="handleForm.php">
 						<fieldset>
 							<h2>Which Train Do you Catch?</h2>
 							<label for="startStation">Station you start at:</label>
