@@ -59,11 +59,9 @@ function echoArray($array){
 	
 	<section>
 	<div class="container" style="background:url(watchBG.png) bottom right no-repeat;">
-	<div class="row">
-		<div class="span10 offset3">
-			<h1>Never be late to work again.</h1>
-			<p>Sign up below to receive a text message whenever <i>your</i> train is going to be late.</p>
-		</div>
+	<div class="hero-unit">
+		<h1>Never be late to work again.</h1>
+		<p>Sign up below to receive a text message whenever <i>your</i> train is going to be late.</p>
 	</div>
 	
 	<div class="row">
