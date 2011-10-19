@@ -46,7 +46,7 @@ function echoArray($array){
 		<div class="topbar">
 			<div class="fill">
 				<div class="container">
-					<a class="brand" href="#">Late BART</a>
+					<a class="brand" href="#"><img src="lateBartLogo.png"></a>
 					<ul class="nav">
 					<li class="active"><a href="#">Home</a></li>
 					<li><a href="#about">About</a></li>
