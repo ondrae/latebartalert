@@ -1,117 +1,16 @@
 /* 
 Late BART Alert Stylesheet
-v0.3
-Last Updated: 08-16-2011
-Author: Andrew Hyder Http://hackyourcity.com 
+v2
+Last Updated: 12-04-2011
+Author: Andrew Hyder Http://ondrae.com 
 Twitter: @ondrae
 */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn, em, img, ins, kbd, q, samp,small, strong, sub, sup, var,b, i, dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    background:transparent;
+
+.hero-unit{
+	padding: 80px 20px 60px 60px;
+	background: #FFF;
 }
 
-body{
-	background:#333;
-	font-family:Arial, Verdana, sans-serif;
-	}
-
-h2{
-	font-size:24px;
-	}
-		
-header{
-	background:white;
-	height:160px;
-	}
-
-#hat{
-	background:#333;
-	height:15px;
-	}
-	
-#head{
-	width:480px;
-	margin: 0 auto 0 auto;
-	background:white;
-	margin-top:10px;
-	}	
-
-#sectionBackground{
-	background:url(watchBG.png) bottom right no-repeat #9999cc; 
-	}
-
-section {
-	width:480px;
-	margin:0 auto 0 auto;
-	padding: 15px 0 15px 0;
-	}
-
-fieldset {
-	width: 480px;
-	margin: 0 auto 0 auto;
-	padding-top:10px;
-	}
-
-form ol{
-	list-style:none;
-	}
-
-form li{
-	padding:10px 0 10px 0;
-	}
-
-form label
-	{
-	display: block;
-	font-size:20px;
-	}
-
-form select{
-	width:479px;
-	border-color: #333;
-	display: block;
-	font-size:20px;
-	}	 
-
-input {   
-    border-color:#333;
-    border-width:1px;
-    width: 465px;
-    font-size:20px;
-    border-radius:10px;
-	-moz-border-radius: 10px;
-	padding:6px;  
-    }
-
-.submit{
-	float:right
-	}
-
-.submit input{
-	width:175px;
-	height:50px;
-	border-radius:10px;
-	-moz-border-radius: 10px;
-	background: #333;    
-	color:white;
-	}
-
-.submit input:active{
-	font-size:14px;
-	}	
-
-footer {
-	width:480px;
-	padding:10px;
-	color:#fff;
-	margin:0 auto 0 auto;
-	font-size:14px;
-	}	
-
-footer a, #footer a{
-	color:#9999cc;
-	}	
+.btn{
+	margin-top: 10px;
+}

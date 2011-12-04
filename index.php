@@ -36,7 +36,7 @@ function echoArray($array){
 		<![endif]-->
 		<!--<LINK REL=StyleSheet HREF="html5Reset.css" TYPE="text/css" MEDIA=screen>-->
 		<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css">
-		<!--<LINK REL=StyleSheet HREF="lateBartStyle.css" TYPE="text/css" MEDIA=screen>-->
+		<LINK REL=StyleSheet HREF="lateBartStyle.css">
 		
 	
 	</head>
@@ -47,11 +47,6 @@ function echoArray($array){
 			<div class="fill">
 				<div class="container">
 					<a class="brand" href="#"><img src="lateBartLogo.png"></a>
-					<ul class="nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
-					</ul>
 				</div>
 			</div>
 		</div>		
@@ -65,7 +60,7 @@ function echoArray($array){
 	</div>
 	
 	<div class="row">
-		<div class="span10 offset3">
+		<div class="span10">
 			<form class="form-stacked" method="post" action="handleForm.php">
 				<fieldset>
 					<h2>Which Train Do you Catch?</h2>
@@ -178,7 +173,7 @@ function echoArray($array){
 	<footer>
 		<div class="container">
 		<div class="row">
-			<div class="span10 offset3">
+			<div class="span10">
 				Late Bart Alert is in still in Beta testing. It is being built by Andrew Hyder, an <a href="http://hackyourcity.com">Urban Hacker</a> from San Francisco.
 			</div>
 		</div>
