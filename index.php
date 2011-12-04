@@ -173,7 +173,7 @@ function echoArray($array){
 	<footer>
 		<div class="container">
 		<div class="row">
-			<div class="span10">
+			<div class="span14">
 				Late Bart Alert is in still in Beta testing. It is being built by Andrew Hyder, an <a href="http://hackyourcity.com">Urban Hacker</a> from San Francisco.
 			</div>
 		</div>
