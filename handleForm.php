@@ -185,7 +185,7 @@ mail('hyd415@gmail.com', 'LATE BART SIGN UP', $message);
 		<div class="container">
 		<div class="row">
 			<div class="span14">
-				Late Bart Alert is in still in Beta testing. It is being built by Andrew Hyder, an <a href="http://hackyourcity.com">Urban Hacker</a> from San Francisco.
+				Late Bart Alert is in still in Beta testing. It is being built by <a href="http://www.ondrae.com">Andrew Hyder</a> in San Francisco.
 			</div>
 		</div>
 		</div>
