@@ -130,14 +130,7 @@ $insert = "INSERT INTO $table VALUES ('','$startStation[0]','$time','$endStation
 openDatabase();
 mysql_query($insert);
 mysql_close();
-?>
 
-<?php
-// The message
-$message = "Yooo. Someone signed up. " . "START: " . $startStation[0] . "TIME: " . $time . "END: " . endStation[0] . "PHONE:" . $phone; 
-
-// Send
-mail('hyd415@gmail.com', 'LATE BART SIGN UP', $message);
 ?>
 
 <!DOCTYPE html>
