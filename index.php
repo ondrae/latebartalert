@@ -90,7 +90,7 @@ function echoArray($array){
 						<option value="7:45 am">7:45 am</option>
 						<option value="8:00 am">8:00 am</option>
 						<option value="8:15 am">8:15 am</option>
-						<option value="8:30 am">8:30 am</option>
+						<option value="8:30 am" selected>8:30 am</option>
 						<option value="8:45 am">8:45 am</option>
 						<option value="9:00 am">9:00 am</option>
 						<option value="9:15 am">9:15 am</option>

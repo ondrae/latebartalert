@@ -132,58 +132,64 @@ mysql_query($insert);
 mysql_close();
 ?>
 
+<?php
+// The message
+$message = "Yooo. Someone signed up. " . "START: " . $startStation[0] . "TIME: " . $time . "END: " . endStation[0] . "PHONE:" . $phone; 
+
+// Send
+mail('hyd415@gmail.com', 'LATE BART SIGN UP', $message);
+?>
+
 <!DOCTYPE html>
 
 <html>
 
 	<head>
 		<meta charset="utf-8" />
-		<title>Late BART Alert</title>
+		<title>Late BART</title>
 		<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<!--<LINK REL=StyleSheet HREF="html5Reset.css" TYPE="text/css" MEDIA=screen>-->
-		<LINK REL=StyleSheet HREF="lateBartStyle.css" TYPE="text/css" MEDIA=screen>
+		<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css">
+		<LINK REL=StyleSheet HREF="lateBartStyle.css">
 		
 	
 	</head>
 	
 <body>
-	
-	
 	<header>
-	<div id="hat">
-	</div><!--/hat-->
-	
-	<div id="head">
-		<div id="tagline">
-			Late BART Alert will send you a text message if your train is going to be late. Sign up now to join our beta.
-		</div><!--/tagline-->
-	
-		<div id="title">
-			<a href="http://www.latebartalert.com"><img src="lateBartAlertLogoWhiteBG.original.png" alt="" /></a>
-		</div><!--/title-->
-	
-	</div><!--/head-->		
+		<div class="topbar">
+			<div class="fill">
+				<div class="container">
+					<a class="brand" href="#"><img src="lateBartLogo.png"></a>
+				</div>
+			</div>
+		</div>		
 	</header>
 	
-	<div id="sectionBackground">
-	<section id="lateTrainAlert" style="height:600px">
-	
-	Awesome. We'll send you a text, email, or tweet whenever the train from 
-	<?php 
+	<section>
+	<div class="container" style="background:url(watchBG.png) bottom right no-repeat;">
+	<div class="hero-unit">
+		<h1>Awesome</h1>
+		<p>We'll send you a text, email, or tweet whenever the train from 
+		<?php 
 		echo " ". $startStation[0] . " leaving around " . $time . " headed towards " . $endStation[0] . " is late. ";
-		?>	
-	 If you want to sign up for another train, maybe for your evening commute, then click <a href="http://www.latebartalert.com">here</a>.	
-	
+		?>
+		If you want to sign up for another train, maybe for your evening commute, then click <a href="http://www.latebartalert.com">here</a>.	
+		</p>
+	</div>
 	</section>
 
-	</div><!--/sectonBackground-->
-
 	<footer>
-		Late Bart is in still in Beta testing. It is being built by Andrew Hyder, an <a href="http://hackyourcity.com">Urban Hacker</a> from San Francisco.
+		<div class="container">
+		<div class="row">
+			<div class="span14">
+				Late Bart Alert is in still in Beta testing. It is being built by Andrew Hyder, an <a href="http://hackyourcity.com">Urban Hacker</a> from San Francisco.
+			</div>
+		</div>
+		</div>
 	</footer>
-	</div><!--/footerBackground-->
 
 </body>
 </html>
