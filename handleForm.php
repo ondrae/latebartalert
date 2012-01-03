@@ -134,7 +134,7 @@ mysql_close();
 
 $welcomeText = "We'll send you a text whenever the train from ". $startStation[0] . " leaving around " . $time . " headed towards " . $endStation[0] . " is late. ";
 $contactInfo[] = $phone;	
-sendAlerts($welcomeText, $contactFINo);
+sendAlerts($welcomeText, $contactInfo);
 
 ?>
 
