@@ -1,5 +1,6 @@
 <?php
 include 'sqlConnect.php';
+include 'sendAlerts.php';
 
 //Establish variables names from form
 $startStation = array($_POST['startStation']);
@@ -131,6 +132,10 @@ openDatabase();
 mysql_query($insert);
 mysql_close();
 
+$welcomeText = "We'll send you a text whenever the train from ". $startStation[0] . " leaving around " . $time . " headed towards " . $endStation[0] . " is late. ";
+$contactInfo[] = $phone;	
+sendAlerts($welcomeText, $contactFINo);
+
 ?>
 
 <!DOCTYPE html>
@@ -165,7 +170,7 @@ mysql_close();
 	<div class="container" style="background:url(watchBG.png) bottom right no-repeat;">
 	<div class="hero-unit">
 		<h1>Awesome</h1>
-		<p>We'll send you a text, email, or tweet whenever the train from 
+		<p>We'll send you a text whenever the train from 
 		<?php 
 		echo " ". $startStation[0] . " leaving around " . $time . " headed towards " . $endStation[0] . " is late. ";
 		?>

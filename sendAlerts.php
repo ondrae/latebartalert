@@ -13,7 +13,7 @@ function sendAlerts($alert, $contactInfo){
 	/* Your Twilio Number or Outgoing Caller ID */
 	$from= '4156250104';
 
-	// Iterate over all our server admins
+	// Iterate over commuters
     foreach ($contactInfo as $to) {
         $client->account->sms_messages->create($from, $to, $alert);
     }
