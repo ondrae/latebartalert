@@ -26,11 +26,12 @@ function checkAlert(){
 			$insert = "INSERT INTO $table VALUES ('','$currentStation','$currentAdvisory',NOW());";
 			mysql_query($insert);
 			mysql_close();
+			include sendAlerts.php;
+			sendAlerts($currentAdvisory, ['4153074175']); // Send every alert to me.
 			include parseAlert.php;
 			$delayedStations = alertParser();
 			include checkCommuters.php;
 			$contactInfo = checkCommuters($delayedStations);
-			include sendAlerts.php;
 			sendAlerts($currentAdvisory, $contactInfo);
 		}
 	}
