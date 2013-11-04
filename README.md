@@ -55,23 +55,6 @@
        ``.syyys+:--::/+oossssssoo+/:-`.syyyyyys-` 
        oyyyyyyyyyyy+                :yyyyyyyyyyyy/
 
-               .://+/:.                           
-             -osssssssss/`                        
-            /sssssssssssso`                       
-       ````.ssssssssssssss/-///:`                 
-    `:+osssssssssssssssssssssssss/ ........`      
-   `osssssssssssssssssssssssssssss.:::::::::-     
-   :ssssssssssssssssssssssssssssss.::::::::::`    
-   -ssssssssssssssssssssssssssssss.::::::::::`    
-    :ossssssssssssssssssssssssssss.::::::::::`    
-     `-://////+sssso/+++++++++++++.::::::::::`    
-               sso-` `:::::::::::::::::::::::`    
-               +-`   `:::::::::::::::::::::::`    
-                      -:::::::::::::::::::::-     
-                        ``````````.-::::```       
-                                    `-::          
-                                      `-        
-
 </pre>
 
 http://latebart.com
