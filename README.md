@@ -1,5 +1,6 @@
 ## Made in Kansas City
 
+<pre>
 
                      `..----..`                    
                  .-://////////:-.                 
@@ -71,6 +72,7 @@
                                     `-::          
                                       `-        
 
+</pre>
 
 http://latebart.com
 Late BART Alert is a web service that will send you a text message if your specific train is going to be late.
