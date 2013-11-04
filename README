@@ -1,36 +1,20 @@
-                                   ..---.`                                                          
-                              .:+sssssssssso/-`                                                     
-                           `:osssssssssssssssss+-                                                   
-                          :sssssssssssssssssssssso.                                                 
-                        `/sssssssssssssssssssssssss:                                                
-                        /sssssssssssssssssssssssssss.                                               
-                       .ssssssssssssssssssssssssssss+`    ```                                       
-                       /sssssssssssssssssssssssssssss-:/osssso+/.                                   
-            `-/+osssoo+ossssssssssssssssssssssssssssssssssssssssso.                                 
-          -+sssssssssssssssssssssssssssssssssssssssssssssssssssssss: `................`             
-        .+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssss`.::::::::::::::::::.`          
-       `ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss..::::::::::::::::::::`         
-      `+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss..::::::::::::::::::::-         
-      .ossssssssssssssssssssssssssssssssssssssssssssssssssssssssssss..::::::::::::::::::::-         
-      .ossssssssssssssssssssssssssssssssssssssssssssssssssssssssssss..::::::::::::::::::::-         
-       +ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss..::::::::::::::::::::-         
-       `osssssssssssssssssssssssssssssssssssssssssssssssssssssssssss..::::::::::::::::::::-         
-        `+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssss..::::::::::::::::::::-         
-          -+ssssssssssssssssssssssssssssssssssssssssssssssssssssssss..::::::::::::::::::::-         
-            `-/+oooooooooooooossssssssssoooooooooooooooooooooooooooo..::::::::::::::::::::-         
-                             `ssssssss+.   ..........................-::::::::::::::::::::-         
-                             `ssssss/.     -::::::::::::::::::::::::::::::::::::::::::::::-         
-                             `ssss/.       -::::::::::::::::::::::::::::::::::::::::::::::-         
-                             `ss/.         -::::::::::::::::::::::::::::::::::::::::::::::-         
-                             `/.           .::::::::::::::::::::::::::::::::::::::::::::::-         
-                                            -::::::::::::::::::::::::::::::::::::::::::::-          
-                                             `-::::::::::::::::::::::::::::::::::::::::-.           
-                                                `....................-::::::::::.....`              
-                                                                      `-:::::::-                    
-                                                                        `-:::::-                    
-                                                                          `-:::-                    
-                                                                            `-:-                    
-                                                                              `.          
+               .://+/:.                           
+             -osssssssss/`                        
+            /sssssssssssso`                       
+       ````.ssssssssssssss/-///:`                 
+    `:+osssssssssssssssssssssssss/ ........`      
+   `osssssssssssssssssssssssssssss.:::::::::-     
+   :ssssssssssssssssssssssssssssss.::::::::::`    
+   -ssssssssssssssssssssssssssssss.::::::::::`    
+    :ossssssssssssssssssssssssssss.::::::::::`    
+     `-://////+sssso/+++++++++++++.::::::::::`    
+               sso-` `:::::::::::::::::::::::`    
+               +-`   `:::::::::::::::::::::::`    
+                      -:::::::::::::::::::::-     
+                        ``````````.-::::```       
+                                    `-::          
+                                      `-        
+
 
 http://latebart.com
 Late BART Alert is a web service that will send you a text message if your specific train is going to be late.
